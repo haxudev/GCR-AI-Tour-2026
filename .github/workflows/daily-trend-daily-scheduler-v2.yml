@@ -1,0 +1,275 @@
+name: daily-trend-daily-scheduler
+
+on:
+  schedule:
+    # GitHub Actions cron is interpreted in UTC.
+    # 北京时间(UTC+8) 08:10 -> UTC 00:10
+    - cron: '10 0 * * *'
+  workflow_dispatch:
+  # 兜底触发：当 repo 内已被验证稳定运行的 tech-memory-scheduler 执行完成后，也触发本工作流。
+  # 不改动 tech-memory-scheduler，本工作流仅订阅其完成事件。
+  workflow_run:
+    workflows: ["tech-memory-scheduler"]
+    types: [completed]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    # workflow_run 只在上游成功时才继续；schedule / workflow_dispatch 不受影响
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    concurrency:
+      group: daily-trend-to-frontier-weekly
+      cancel-in-progress: false
+
+    steps:
+      - name: Self-check (context)
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "=== Self-check: basic ==="
+          echo "event_name=${GITHUB_EVENT_NAME}"
+          echo "repository=${GITHUB_REPOSITORY}"
+          echo "ref=${GITHUB_REF}"
+          echo "sha=${GITHUB_SHA}"
+          echo "run_id=${GITHUB_RUN_ID}"
+          echo "run_number=${GITHUB_RUN_NUMBER}"
+          echo "actor=${GITHUB_ACTOR}"
+          echo "=== Self-check: time ==="
+          echo "utc_now=$(TZ=UTC date -Is)"
+          echo "shanghai_now=$(TZ=Asia/Shanghai date -Is)"
+          echo "=== Self-check: expected schedule ==="
+          echo "expected_beijing=08:10"
+          echo "expected_utc=00:10"
+
+      - name: Self-check (schedule payload)
+        if: ${{ github.event_name == 'schedule' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "=== Self-check: schedule ==="
+          echo "cron=${{ github.event.schedule }}"
+
+      - name: Self-check (workflow_run payload)
+        if: ${{ github.event_name == 'workflow_run' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "=== Self-check: workflow_run ==="
+          echo "upstream_name=${{ github.event.workflow_run.name }}"
+          echo "upstream_conclusion=${{ github.event.workflow_run.conclusion }}"
+          echo "upstream_event=${{ github.event.workflow_run.event }}"
+          echo "upstream_head_branch=${{ github.event.workflow_run.head_branch }}"
+          echo "upstream_head_sha=${{ github.event.workflow_run.head_sha }}"
+          echo "upstream_run_number=${{ github.event.workflow_run.run_number }}"
+          echo "upstream_url=${{ github.event.workflow_run.html_url }}"
+
+      # IMPORTANT:
+      # - 之前这里用 `exit 0` 只会让 step 成功，但 job 仍会继续跑后续步骤。
+      # - 现在改为通过 outputs 产生 `proceed=true/false`，并让后续所有耗时步骤用 `if:` 统一门禁。
+      - name: Decide time window gate (Asia/Shanghai)
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          proceed="true"
+          reason="ok"
+
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
+            echo "Manual dispatch: skip time window gate."
+          else
+            # 兜底触发（workflow_run）可能早于 08:10（例如上游 08:00 开始很快结束），
+            # 也可能略晚于 08:10。这里的策略是：
+            # - 仅允许在 08:10 前 PRE_WINDOW_MINUTES 分钟内“提前触发”，并 sleep 到 08:10 再执行
+            # - 允许在 08:10 起 WINDOW_MINUTES 分钟内执行；超出窗口则跳过后续步骤
+            PRE_WINDOW_MINUTES=20
+            WINDOW_MINUTES=300
+            start_minutes=$((8*60 + 10))
+            now_hm=$(TZ=Asia/Shanghai date +%H:%M)
+            now_minutes=$((10#$(TZ=Asia/Shanghai date +%H)*60 + 10#$(TZ=Asia/Shanghai date +%M)))
+
+            if (( now_minutes < start_minutes - PRE_WINDOW_MINUTES )); then
+              proceed="false"
+              reason="too-early"
+              echo "Too early for daily run. now=${now_hm}, earliest=$(TZ=Asia/Shanghai date -d \"today 08:10 -${PRE_WINDOW_MINUTES} minutes\" +%H:%M)"
+            elif (( now_minutes < start_minutes )); then
+              wait_minutes=$((start_minutes - now_minutes))
+              echo "Triggered before 08:10; waiting ${wait_minutes} minutes to align. now=${now_hm}"
+              sleep "$((wait_minutes * 60))"
+            elif (( now_minutes >= start_minutes + WINDOW_MINUTES )); then
+              proceed="false"
+              reason="outside-window"
+              echo "Outside allowed window. now=${now_hm}, allowed=[08:10, $(TZ=Asia/Shanghai date -d \"today 08:10 +${WINDOW_MINUTES} minutes\" +%H:%M))"
+            else
+              echo "Within allowed window. now=${now_hm}"
+            fi
+          fi
+
+          echo "proceed=${proceed}" >> "$GITHUB_OUTPUT"
+          echo "reason=${reason}" >> "$GITHUB_OUTPUT"
+          echo "gate.proceed=${proceed}, gate.reason=${reason}"
+
+      - name: Checkout frontier-weekly (for idempotency check)
+        if: ${{ steps.gate.outputs.proceed == 'true' }}
+        uses: actions/checkout@v4
+        with:
+          repository: haxudev/frontier-weekly
+          ref: main
+          token: ${{ secrets.FRONTIER_WEEKLY_TOKEN }}
+          persist-credentials: true
+          path: frontier-weekly
+
+      - name: Decide idempotency (skip if today's report already exists)
+        id: idempotency
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ steps.gate.outputs.proceed }}" != "true" ]]; then
+            echo "Gate says do not proceed; skip idempotency check."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            echo "reason=skipped-by-time-gate" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          date_ymd=$(TZ=Asia/Shanghai date +%Y%m%d)
+          target="frontier-weekly/content/zh/${date_ymd}.md"
+
+          if [[ -f "$target" ]]; then
+            echo "Already published today: $target"
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            echo "reason=already-published" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Not yet published today: $target"
+          echo "proceed=true" >> "$GITHUB_OUTPUT"
+          echo "reason=not-yet-published" >> "$GITHUB_OUTPUT"
+
+      - name: Decision summary (gate + idempotency)
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "=== Decision summary ==="
+          echo "event_name=${GITHUB_EVENT_NAME}"
+          echo "utc_now=$(TZ=UTC date -Is)"
+          echo "shanghai_now=$(TZ=Asia/Shanghai date -Is)"
+          echo "gate.proceed=${{ steps.gate.outputs.proceed }}"
+          echo "gate.reason=${{ steps.gate.outputs.reason }}"
+          echo "idempotency.proceed=${{ steps.idempotency.outputs.proceed }}"
+          echo "idempotency.reason=${{ steps.idempotency.outputs.reason }}"
+          if [[ "${{ steps.gate.outputs.proceed }}" == "true" && "${{ steps.idempotency.outputs.proceed }}" == "true" ]]; then
+            echo "decision=PROCEED"
+          else
+            echo "decision=SKIP"
+          fi
+
+      - name: Checkout vibe-workflows
+        if: ${{ steps.gate.outputs.proceed == 'true' && steps.idempotency.outputs.proceed == 'true' }}
+        uses: actions/checkout@v4
+        with:
+          # Checkout this repo into a dedicated folder so `frontier-weekly/` remains
+          # an independent git repo (and git commands won't accidentally resolve to the parent repo).
+          path: vibe-workflows
+
+      - name: Setup Python
+        if: ${{ steps.gate.outputs.proceed == 'true' && steps.idempotency.outputs.proceed == 'true' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+          cache-dependency-path: vibe-workflows/requirements.txt
+
+      - name: Install system dependencies
+        if: ${{ steps.gate.outputs.proceed == 'true' && steps.idempotency.outputs.proceed == 'true' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpq-dev
+
+      - name: Install Python dependencies
+        if: ${{ steps.gate.outputs.proceed == 'true' && steps.idempotency.outputs.proceed == 'true' }}
+        working-directory: vibe-workflows
+        run: pip install -r requirements.txt
+
+      - name: Run Daily Trend workflow (Azure AI Foundry)
+        if: ${{ steps.gate.outputs.proceed == 'true' && steps.idempotency.outputs.proceed == 'true' }}
+        working-directory: vibe-workflows
+        env:
+          # Supabase retrieval (pgvector)
+          SUPABASE_CONNECTION_URI: ${{ secrets.SUPABASE_CONNECTION_URI }}
+          Connection_pooling: ${{ secrets.CONNECTION_POOLING }}
+          PGSSLMODE: require
+
+          # Embeddings for retrieval
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME: ${{ secrets.AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME }}
+          AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
+
+          # Azure AI Foundry Agents (agent-framework + DefaultAzureCredential)
+          AZURE_AI_PROJECT_ENDPOINT: ${{ secrets.AZURE_AI_PROJECT_ENDPOINT }}
+          AZURE_AI_MODEL_DEPLOYMENT_NAME: ${{ secrets.AZURE_AI_MODEL_DEPLOYMENT_NAME }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+
+          PYTHONUNBUFFERED: '1'
+        run: |
+          python generated/daily_trend_gen_workflow/run.py \
+            --workflow generated/daily_trend_gen_workflow/workflow.yaml \
+            --non-interactive \
+            --azure-ai \
+            --azure-ai-agent-id-map-json generated/daily_trend_gen_workflow/agent_id_map.json \
+            --set Local.TimeWindowHours=24 \
+            --no-azure-ai-auto-resolve-agent-ids
+
+      - name: Locate final report
+        if: ${{ steps.gate.outputs.proceed == 'true' && steps.idempotency.outputs.proceed == 'true' }}
+        id: locate
+        working-directory: vibe-workflows
+        run: |
+          set -euo pipefail
+          latest_dir=$(ls -1dt output/daily_trend_gen_workflow/*/ | head -n 1)
+          final_path="${latest_dir%/}/final.md"
+          test -f "$final_path"
+
+          date_ymd=$(TZ=Asia/Shanghai date +%Y%m%d)
+          echo "final_path=$final_path" >> "$GITHUB_OUTPUT"
+          echo "date_ymd=$date_ymd" >> "$GITHUB_OUTPUT"
+
+      - name: Copy report into frontier-weekly
+        if: ${{ steps.gate.outputs.proceed == 'true' && steps.idempotency.outputs.proceed == 'true' }}
+        working-directory: vibe-workflows
+        run: |
+          set -euo pipefail
+          mkdir -p ../frontier-weekly/content/zh
+          cp "${{ steps.locate.outputs.final_path }}" "../frontier-weekly/content/zh/${{ steps.locate.outputs.date_ymd }}.md"
+
+      - name: Commit and push (if changed)
+        if: ${{ steps.gate.outputs.proceed == 'true' && steps.idempotency.outputs.proceed == 'true' }}
+        working-directory: frontier-weekly
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          [[ "$(git remote get-url origin)" == *"github.com/haxudev/frontier-weekly"* ]] || { echo "Refusing to push: unexpected git remote origin=$(git remote get-url origin)"; exit 1; }
+          git checkout -B main
+          git add content/zh/${{ steps.locate.outputs.date_ymd }}.md
+          git diff --cached --quiet && { echo "Nothing staged (target file unchanged); skip commit."; exit 0; }
+          git commit -m "daily trend: ${{ steps.locate.outputs.date_ymd }}"
+          git push origin HEAD:main
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-trend-output
+          path: vibe-workflows/output/daily_trend_gen_workflow/**
+          if-no-files-found: ignore
+          retention-days: 3
