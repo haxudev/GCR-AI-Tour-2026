@@ -1,0 +1,173 @@
+{
+  "mode": "llm",
+  "top_k": 12,
+  "hotspots": [
+    {
+      "hotspot_id": "H01",
+      "title": "AI Coding 工具链密集迭代：Claude Code、Cline、Continue 同步更新",
+      "summary": "过去一周 AI 编程工具持续高频发版：Claude Code 推出 v2.1.92（含 Bedrock 向导、per-model 成本拆解）；Cline v3.77.0 及 CLI v2.13.0 同步发布；Continue v1.3.38 适配 VSCode/JetBrains。三款工具均深化 IDE 集成与企业合规能力，标志 Agentic Coding 进入成熟迭代期。",
+      "category": "trend",
+      "overall_heat_score": 88,
+      "coverage": {
+        "source_count": 3,
+        "companies": [
+          "Anthropic",
+          "Cline",
+          "Continue"
+        ],
+        "platforms": [
+          "claude-code",
+          "cline",
+          "continue"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "多来源 AI 编程工具同步迭代，预示 Agentic Coding 工具格局进一步分化",
+        "企业版功能（Bedrock、策略管控）加速落地"
+      ],
+      "samples": [
+        {
+          "platform": "claude-code",
+          "title": "v2.1.92",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.92",
+          "published_at": "2026-04-04T00:42:02Z",
+          "company": "Anthropic",
+          "signal_level": "B"
+        },
+        {
+          "platform": "cline",
+          "title": "v3.77.0",
+          "url": "https://github.com/cline/cline/releases/tag/v3.77.0",
+          "published_at": "2026-04-01T00:00:00Z",
+          "company": "Cline",
+          "signal_level": "B"
+        },
+        {
+          "platform": "continue",
+          "title": "v1.3.38-vscode",
+          "url": "https://github.com/continuedev/continue/releases/tag/v1.3.38-vscode",
+          "published_at": "2026-03-27T21:34:07Z",
+          "company": "Continue",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H02",
+      "title": "Claude Code v2.1.92：企业合规与 Bedrock 深度集成",
+      "summary": "Anthropic 发布 Claude Code v2.1.92，引入 forceRemoteSettingsRefresh 策略强制刷新远端配置（fail-closed 模式）；新增交互式 Bedrock 设置向导；升级 /cost 命令支持 per-model 与 cache-hit 分项展示。",
+      "category": "single",
+      "overall_heat_score": 85,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "Anthropic"
+        ],
+        "platforms": [
+          "claude-code"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "企业级管控能力加速 AI 编程工具企业化落地",
+        "Bedrock 集成降低 AWS 客户迁移门槛"
+      ],
+      "samples": [
+        {
+          "platform": "claude-code",
+          "title": "v2.1.92",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.92",
+          "published_at": "2026-04-04T00:42:02Z",
+          "company": "Anthropic",
+          "signal_level": "B"
+        },
+        {
+          "platform": "claude-code",
+          "title": "v2.1.91",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.91",
+          "published_at": "2026-04-02T00:00:00Z",
+          "company": "Anthropic",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H03",
+      "title": "Databricks CLI Snapshot：数据平台工具链持续演进",
+      "summary": "Databricks CLI 发布 Snapshot 版本（2026-04-02），持续完善数据工程与 ML 工作流的命令行体验，在 LLMOps 与数据编排方向保持稳定迭代节奏。",
+      "category": "single",
+      "overall_heat_score": 62,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "Databricks"
+        ],
+        "platforms": [
+          "databricks-engineering"
+        ]
+      },
+      "should_chase": "no",
+      "chase_rationale": [
+        "常规版本迭代，无重大架构变化"
+      ],
+      "samples": [
+        {
+          "platform": "databricks-engineering",
+          "title": "Snapshot",
+          "url": "https://github.com/databricks/cli/releases/tag/snapshot",
+          "published_at": "2026-04-02T00:00:00Z",
+          "company": "Databricks",
+          "signal_level": "B"
+        },
+        {
+          "platform": "databricks-engineering",
+          "title": "v0.295.0",
+          "url": "https://github.com/databricks/cli/releases/tag/v0.295.0",
+          "published_at": "2026-03-18T00:00:00Z",
+          "company": "Databricks",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H04",
+      "title": "Cline CLI v2.13.0：AI 编程工具向终端与无界面场景扩展",
+      "summary": "Cline 同步发布 GUI 版 v3.77.0 与 CLI 专属版 v2.13.0，将 AI 编程助手能力延伸至 CI/CD 管道与服务器端工作流，标志 AI Coding 工具从 IDE 插件走向全栈自动化平台。",
+      "category": "single",
+      "overall_heat_score": 78,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "Cline"
+        ],
+        "platforms": [
+          "cline"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "CLI/无界面模式打开 CI/CD 集成新场景",
+        "AI 编程工具平台化趋势的重要信号"
+      ],
+      "samples": [
+        {
+          "platform": "cline",
+          "title": "v2.13.0-cli",
+          "url": "https://github.com/cline/cline/releases/tag/v2.13.0-cli",
+          "published_at": "2026-04-02T00:00:00Z",
+          "company": "Cline",
+          "signal_level": "B"
+        },
+        {
+          "platform": "cline",
+          "title": "v3.77.0",
+          "url": "https://github.com/cline/cline/releases/tag/v3.77.0",
+          "published_at": "2026-04-01T00:00:00Z",
+          "company": "Cline",
+          "signal_level": "B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "mode": "llm",
+  "insights": [
+    {
+      "hotspot_id": "H01",
+      "title": "AI Coding 工具链密集迭代：Claude Code、Cline、Continue 同步更新",
+      "what_changed": "Claude Code v2.1.92 引入企业策略强制刷新（fail-closed）和交互式 Bedrock 配置向导；Cline 同步发布 GUI v3.77.0 与 CLI v2.13.0，新增无界面/CI 管道模式；Continue v1.3.38 持续优化 VSCode 与 JetBrains 双端体验。三款工具均在 2026 年 3 月下旬至 4 月初集中发版。",
+      "why_it_matters": "AI 编程工具从\"单点 IDE 插件\"演进为\"企业级 Agentic Coding 平台\"的趋势愈发清晰：管控策略、多云集成（Bedrock）、CLI 自动化成为核心竞争维度。开发者工具市场进入以企业合规与平台化为核心的新竞争周期。",
+      "who_is_impacted": [
+        "企业级开发团队（需要合规与多云部署）",
+        "DevOps/平台工程师（CI/CD 流水线集成）",
+        "IDE 工具链选型决策者",
+        "开源 AI Coding 工具生态贡献者"
+      ],
+      "next_actions": [
+        "评估 Claude Code Bedrock 向导是否适配内部 AWS 环境",
+        "测试 Cline CLI 无界面模式接入现有 CI/CD 流水线",
+        "对比 Claude Code / Cline / Continue 企业功能矩阵，制定选型方案"
+      ],
+      "risk_notes": [
+        "多工具并行维护成本上升",
+        "各工具 API 频繁变更可能影响集成稳定性"
+      ],
+      "references": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.92",
+        "https://github.com/cline/cline/releases/tag/v3.77.0",
+        "https://github.com/continuedev/continue/releases/tag/v1.3.38-vscode"
+      ]
+    },
+    {
+      "hotspot_id": "H02",
+      "title": "Claude Code v2.1.92：企业合规与 Bedrock 深度集成",
+      "what_changed": "新增 forceRemoteSettingsRefresh 策略，启用后 CLI 在启动时阻塞直至远端托管设置成功拉取，拉取失败则退出（fail-closed）。交互式 Bedrock 设置向导引导完成 AWS 认证、区域配置、凭证验证与模型锁定全流程。/cost 命令新增 per-model 与 cache-hit 分项，Pro 用户还可见 prompt cache 过期提示及预计 token 消耗。",
+      "why_it_matters": "Fail-closed 策略是企业级安全合规的关键设计模式，表明 Anthropic 在将 Claude Code 推向企业市场时已将安全性置于可用性之上。Bedrock 向导大幅降低 AWS 企业客户的接入门槛，加速商业化落地。成本透明化功能则直接响应企业 FinOps 需求。",
+      "who_is_impacted": [
+        "AWS / Bedrock 用户",
+        "安全合规团队",
+        "FinOps 与云成本管理团队",
+        "企业 AI 编程工具采购决策者"
+      ],
+      "next_actions": [
+        "验证 forceRemoteSettingsRefresh 与现有零信任/VPN 策略的兼容性",
+        "利用 Bedrock 向导完成内部 AWS 环境配置",
+        "基于 /cost per-model 拆解优化 token 使用策略"
+      ],
+      "risk_notes": [
+        "fail-closed 设计在网络抖动场景下可能导致开发中断",
+        "需确认 Bedrock 模型版本锁定与企业安全审计要求一致"
+      ],
+      "references": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.92",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.91"
+      ]
+    },
+    {
+      "hotspot_id": "H03",
+      "title": "Databricks CLI Snapshot：数据平台工具链持续演进",
+      "what_changed": "Databricks CLI 发布 Snapshot 版本（2026-04-02），在 v0.295.0 基础上持续迭代，覆盖数据工程与 ML Ops 工作流命令行体验优化，同步更新文档与 API 绑定。",
+      "why_it_matters": "Databricks 持续保持月度迭代节奏，与 LLMOps 和数据编排场景的增长步调一致。Snapshot 版本的发布通常意味着下一个稳定版 feature freeze 临近，值得关注正式版带来的 breaking changes。",
+      "who_is_impacted": [
+        "数据工程师与 ML 工程师",
+        "LLMOps 平台团队",
+        "依赖 Databricks CLI 的自动化脚本维护者"
+      ],
+      "next_actions": [
+        "关注 Snapshot → 正式版的 changelog，提前评估 breaking changes",
+        "在非生产环境测试 Snapshot 版本，确保自动化脚本兼容性"
+      ],
+      "risk_notes": [
+        "Snapshot 版本为预发布，不建议直接用于生产"
+      ],
+      "references": [
+        "https://github.com/databricks/cli/releases/tag/snapshot",
+        "https://github.com/databricks/cli/releases/tag/v0.295.0"
+      ]
+    },
+    {
+      "hotspot_id": "H04",
+      "title": "Cline CLI v2.13.0：AI 编程工具向终端与无界面场景扩展",
+      "what_changed": "Cline 发布专属 CLI 版本 v2.13.0，与 GUI 版 v3.77.0 并行维护。CLI 版专注于无头（headless）运行模式，可在无 IDE 环境的服务器、容器或 CI/CD 流水线中直接调用 AI 编程能力。",
+      "why_it_matters": "AI Coding 工具不再局限于开发者桌面端，而是向 DevOps 基础设施渗透。CLI 模式使 AI 辅助代码审查、自动修复、测试生成等任务可以嵌入流水线，标志 Agentic Coding 进入基础设施层。",
+      "who_is_impacted": [
+        "DevOps / SRE 工程师",
+        "平台工程团队",
+        "自动化 code review 和测试流程的维护者",
+        "AI 编程工具的基础设施架构师"
+      ],
+      "next_actions": [
+        "评估 Cline CLI 集成到 PR review 或 pre-commit hook 的可行性",
+        "对比 Claude Code CLI 与 Cline CLI 的功能覆盖，选择适配现有工作流的方案"
+      ],
+      "risk_notes": [
+        "CLI 版本与 GUI 版独立维护，需关注功能同步进度",
+        "无界面模式下的调试与日志追踪能力有待验证"
+      ],
+      "references": [
+        "https://github.com/cline/cline/releases/tag/v2.13.0-cli",
+        "https://github.com/cline/cline/releases/tag/v3.77.0"
+      ]
+    }
+  ]
+}
