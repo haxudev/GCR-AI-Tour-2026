@@ -27,6 +27,12 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install GitHub Copilot CLI
+        run: |
+          npm install -g @github/copilot
+          command -v copilot
+          copilot --version
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
