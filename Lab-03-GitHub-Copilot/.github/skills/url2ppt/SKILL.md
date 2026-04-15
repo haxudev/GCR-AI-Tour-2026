@@ -39,7 +39,7 @@ argument-hint: 提供两个参数：url 和页数，例如：url=https://example
 3. 使用 pptx skill 创建 PPT
 - 在 Markdown 大纲完成后，调用 pptx skill 生成 `.pptx` 文件。
 - 生成的 PPT 应与 Markdown 的分页一一对应。
- - PPT 文件必须保存在工作区内的 `output/` 目录下；如果目录不存在，应先创建该目录。
+ - PPT 文件必须保存在当前工作目录下（即 session 的 working directory）；如果目录不存在，应先创建该目录。不要在当前目录下再创建 `output/` 子目录。
 - 若原始网页信息不足以支撑目标页数，可在不偏离原主题的前提下进行合理扩展，但要保持内容可信、克制且结构清晰。
 
 执行要求：

@@ -1,5 +1,6 @@
-import { findGeneratedPptx, snapshotPptxNames } from "@/lib/ppt-files";
+import { createSessionDir, extractReportedPptxName, snapshotPptxNames, waitForGeneratedPptx } from "@/lib/ppt-files";
 import {
+  CopilotInitializationError,
   runUrlToPptConversion,
   type CopilotStreamEvent,
 } from "@/lib/copilot";
@@ -62,7 +63,7 @@ export async function GET(request: Request) {
   }
 
   const encoder = new TextEncoder();
-  const previousNamesPromise = snapshotPptxNames();
+  const sessionDirPromise = createSessionDir();
   const startedAtMs = Date.now();
 
   const stream = new ReadableStream<Uint8Array>({
@@ -97,9 +98,10 @@ export async function GET(request: Request) {
         write("status", statusPayload("starting", "Copilot session is starting."));
 
         try {
-          const previousNames = await previousNamesPromise;
+          const { sessionId, sessionDir } = await sessionDirPromise;
+          const previousNames = await snapshotPptxNames(sessionDir);
           const result = await runUrlToPptConversion(
-            { url, style: style.label, pages },
+            { url, style: style.label, pages, sessionDir },
             {
               onEvent: (event: CopilotStreamEvent) => {
                 write("sdk-event", {
@@ -110,12 +112,18 @@ export async function GET(request: Request) {
             },
           );
 
-          const file = await findGeneratedPptx({ previousNames, startedAtMs });
+          const reportedFileName = extractReportedPptxName(result.replyText);
+          const file = await waitForGeneratedPptx({
+            sessionDir,
+            previousNames,
+            startedAtMs,
+            reportedFileName,
+          });
 
           if (!file) {
             write("generation-error", {
               error:
-                "Copilot SDK completed, but no new PPTX file could be located under ./output. Check the server logs for the session transcript.",
+                "Copilot SDK completed, but no PPTX file could be confirmed in the session directory after waiting for it to finish writing. Check the server logs for the session transcript.",
               replyText: result.replyText,
               eventLog: result.eventLog,
             });
@@ -124,14 +132,23 @@ export async function GET(request: Request) {
 
           write("result", {
             fileName: file.name,
-            downloadPath: `/api/download?file=${encodeURIComponent(file.name)}`,
+            downloadPath: `/api/download?session=${encodeURIComponent(sessionId)}&file=${encodeURIComponent(file.name)}`,
             replyText: result.replyText,
             eventLog: result.eventLog,
           });
           write("complete", statusPayload("complete", "Presentation generation finished."));
         } catch (error) {
+          if (error instanceof CopilotInitializationError) {
+            write("status", statusPayload("authentication-error", error.userMessage));
+          }
+
           write("generation-error", {
-            error: error instanceof Error ? error.message : "Unexpected generation failure.",
+            error:
+              error instanceof CopilotInitializationError
+                ? error.userMessage
+                : error instanceof Error
+                  ? error.message
+                  : "Unexpected generation failure.",
           });
         } finally {
           request.signal.removeEventListener("abort", abortHandler);

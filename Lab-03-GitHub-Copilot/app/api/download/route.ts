@@ -9,7 +9,12 @@ export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
+  const sessionId = searchParams.get("session")?.trim();
   const fileName = searchParams.get("file")?.trim();
+
+  if (!sessionId) {
+    return NextResponse.json({ error: "Missing session parameter." }, { status: 400 });
+  }
 
   if (!fileName) {
     return NextResponse.json({ error: "Missing file parameter." }, { status: 400 });
@@ -17,7 +22,7 @@ export async function GET(request: Request) {
 
   let absolutePath: string;
   try {
-    absolutePath = resolveDownloadPath(fileName);
+    absolutePath = resolveDownloadPath(sessionId, fileName);
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "Invalid file path." },

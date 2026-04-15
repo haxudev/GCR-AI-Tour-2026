@@ -31,6 +31,8 @@ interface StatusPayload {
   timestamp: string;
 }
 
+const MODEL_LIST_ERROR_MESSAGE = "无法列出模型，请确认环境变量已配置";
+
 export default function HomePage() {
   const [url, setUrl] = useState("");
   const [style, setStyle] = useState<PresentationStyleId>("consulting");
@@ -85,7 +87,8 @@ export default function HomePage() {
 
       eventSource.addEventListener("generation-error", (incoming) => {
         const data = JSON.parse((incoming as MessageEvent<string>).data) as { error?: string };
-        setError(data.error ?? "Generation failed.");
+        const message = data.error ?? "Generation failed.";
+        setError(message === MODEL_LIST_ERROR_MESSAGE ? null : message);
         setIsStreaming(false);
         eventSource.close();
         eventSourceRef.current = null;

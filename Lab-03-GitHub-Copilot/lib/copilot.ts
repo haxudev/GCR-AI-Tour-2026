@@ -3,6 +3,7 @@ import { pathToFileURL } from "node:url";
 
 const DEFAULT_MODEL_ID = "gpt-5.3-codex";
 const DEFAULT_TIMEOUT_MS = 20 * 60 * 1000;
+const MODEL_LIST_ERROR_MESSAGE = "无法列出模型，请确认环境变量已配置";
 
 interface ClientBootstrap {
   client: CopilotClientLike;
@@ -13,6 +14,7 @@ interface RunConversionInput {
   url: string;
   style: string;
   pages: number;
+  sessionDir: string;
 }
 
 interface RunConversionOptions {
@@ -75,6 +77,16 @@ let sdkModulePromise: Promise<CopilotSdkModule> | null = null;
 
 interface CopilotSdkModule {
   CopilotClient: new (options?: CopilotClientOptionsLike) => CopilotClientLike;
+}
+
+export class CopilotInitializationError extends Error {
+  readonly userMessage: string;
+
+  constructor(message: string, userMessage: string) {
+    super(message);
+    this.name = "CopilotInitializationError";
+    this.userMessage = userMessage;
+  }
 }
 
 async function loadCopilotSdk(): Promise<CopilotSdkModule> {
@@ -143,7 +155,10 @@ async function bootstrapClient(): Promise<ClientBootstrap> {
       console.log(`Selected model: ${modelId}`);
     } catch (error) {
       console.warn("Failed to list Copilot models during initialization.", error);
-      console.warn(`Falling back to model: ${modelId}`);
+      throw new CopilotInitializationError(
+        error instanceof Error ? error.message : "Failed to list Copilot models during initialization.",
+        MODEL_LIST_ERROR_MESSAGE,
+      );
     }
 
     return { client, modelId };
@@ -335,8 +350,8 @@ export async function runUrlToPptConversion(
 
   const session = await client.createSession({
     model: modelId,
-    workingDirectory: ".",
-    skillDirectories: ["./.github/skills"],
+    workingDirectory: input.sessionDir,
+    skillDirectories: [path.join(process.cwd(), ".github", "skills")],
     onPermissionRequest: approveAll,
     onUserInputRequest: (request: UserInputRequestLike) => {
       const answer = shouldAnswerStyleQuestion(request.question)
