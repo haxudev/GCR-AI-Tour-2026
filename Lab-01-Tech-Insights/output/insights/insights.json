@@ -1,289 +1,231 @@
 {
-  "mode": "llm",
+  "mode": "fallback",
   "insights": [
     {
       "hotspot_id": "H01",
-      "title": "AI 编码工具演进：GitHub Copilot CLI、Claude Code 与 IDE 的未来",
-      "what_changed": "GitHub Copilot CLI 推出多模型协作，Claude Code npm source map 意外曝光源码，IDE 未来讨论升温。",
-      "why_it_matters": "AI 编码工具演化为多智能体协作平台，IDE 将成为模型路由器。",
+      "title": "OpenAI 发布 GPT-5.5 Instant：新默认模型幻觉率更低",
+      "what_changed": "过去 24 小时出现了与“OpenAI 发布 GPT-5.5 Instant：新默认模型幻觉率更低”相关的更新/讨论。来源覆盖 4 个源",
+      "why_it_matters": "这是一条趋势信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
         "开发者",
-        "IDE 厂商",
-        "AI 编码工具初创公司",
-        "企业安全团队"
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "评估多模型特性适合团队工作流",
-        "审计 AI 工具 source map 泄露风险",
-        "关注 IDE 厂商应对策略"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "Claude Code 源码曝光竞争情报风险",
-        "多模型集成增加供应链复杂度"
-      ],
-      "references": [
-        "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H02",
-      "title": "OpenAI 战略布局",
-      "what_changed": "AI 经济白皮书、Stargate 遭伊朗威胁、内部人士质疑 Altman、Safety Fellowship 启动。",
-      "why_it_matters": "OpenAI 转型政策倡导者，内外危机并存影响商业稳定性。",
+      "title": "AI 自主代理（Agents）进入企业落地加速期",
+      "what_changed": "过去 24 小时出现了与“AI 自主代理（Agents）进入企业落地加速期”相关的更新/讨论。来源覆盖 4 个源",
+      "why_it_matters": "这是一条趋势信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "政策制定者",
-        "企业 CTO",
-        "OpenAI 合作伙伴",
-        "中东数据中心运营商"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "关注 AI 经济政策白皮书",
-        "评估 Stargate 地缘政治风险",
-        "跟踪领导层信任危机"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "Stargate 风险影响服务可用性",
-        "领导力危机加速竞争对手崛起"
-      ],
-      "references": [
-        "https://openai.com/news/rss.xml"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H03",
-      "title": "Artemis II 月球飞越",
-      "what_changed": "人类最远载人飞行纪录，飞越月球远侧，NASA 验证深空系统可靠性。",
-      "why_it_matters": "重返月球计划关键里程碑，验证深空通信与生命支持系统。",
+      "title": "Apple iOS 27 引入多 AI 模型选择机制",
+      "what_changed": "过去 24 小时出现了与“Apple iOS 27 引入多 AI 模型选择机制”相关的更新/讨论。来源覆盖 2 个源",
+      "why_it_matters": "这是一条趋势信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "航天行业",
-        "卫星通信技术公司",
-        "国家航天机构"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "关注 Artemis III 时间表",
-        "评估深空通信技术商业应用"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "月球远侧通信延迟问题尚未完全解决"
-      ],
-      "references": [
-        "https://www.theverge.com/rss/index.xml"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H04",
-      "title": "AI 机器人技术突破",
-      "what_changed": "GEN-1 达到 99% 可靠性，NVIDIA Physical AI 进展，机器人割草机商业化，自动驾驶出租车监管焦点。",
-      "why_it_matters": "通用机器人从实验室走向商业部署临界点，消费级机器人市场爆发预兆。",
+      "title": "Google Gemini 全面升级：Google Home 与 Gemma 4 双线推进",
+      "what_changed": "过去 24 小时出现了与“Google Gemini 全面升级：Google Home 与 Gemma 4 双线推进”相关的更新/讨论。来源覆盖 4 个源",
+      "why_it_matters": "这是一条趋势信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "制造业",
-        "消费电子厂商",
-        "自动驾驶公司",
-        "NVIDIA 生态合作伙伴"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "评估 GEN-1 用于企业物流自动化",
-        "关注 NVIDIA Physical AI SDK",
-        "跟踪自动驾驶监管动态"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "复杂环境可靠性可能下降",
-        "远程操作依赖度引发监管风险"
-      ],
-      "references": [
-        "https://blogs.nvidia.com/feed/"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H05",
-      "title": "Anthropic 扩张",
-      "what_changed": "与 Google、Broadcom 扩大算力合作；Claude Code npm source map 暴露部分源代码。",
-      "why_it_matters": "Anthropic 垂直整合策略竞争 OpenAI，源码曝光揭示 AI 工具安全欠债。",
+      "title": "Musk vs Altman 法庭对决：OpenAI 未来走向引发广泛关注",
+      "what_changed": "过去 24 小时出现了与“Musk vs Altman 法庭对决：OpenAI 未来走向引发广泛关注”相关的更新/讨论。来源覆盖 4 个源",
+      "why_it_matters": "这是一条趋势信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "Claude API 用户",
-        "竞争对手",
-        "企业安全团队",
-        "Broadcom 芯片业务"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "追踪 Claude 模型发布时间表",
-        "审计 AI CLI npm 安全配置",
-        "评估 Google 绑定对 API 定价影响"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "算力合作可能导致与 Google Cloud 深度绑定",
-        "源码泄露可能已被存档"
-      ],
-      "references": [
-        "https://techcrunch.com/feed/"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H06",
-      "title": "ChatGPT 第三方应用集成",
-      "what_changed": "ChatGPT 接入 DoorDash、Spotify、Uber，AI 助手具备真实世界操作能力。",
-      "why_it_matters": "AI 助手演变为生活操作系统，应用入口从 App Store 转向 AI 对话界面。",
+      "title": "MCP 安全漏洞警报：OWASP MCP Top 10 披露 38% 服务无鉴权",
+      "what_changed": "过去 24 小时出现了与“MCP 安全漏洞警报：OWASP MCP Top 10 披露 38% 服务无鉴权”相关的更新/讨论。来源覆盖 2 个源",
+      "why_it_matters": "这是一条趋势信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "移动应用开发者",
-        "消费互联网平台",
-        "企业 IT 采购",
-        "竞争对手"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队"
       ],
       "next_actions": [
-        "评估接入 ChatGPT Actions 生态",
-        "关注 Gemini/Apple Intelligence 类似进展",
-        "开发 ChatGPT 集成获取新用户"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "AI 助手中间化客户关系",
-        "数据通过 ChatGPT 中转隐私合规风险"
-      ],
-      "references": [
-        "https://www.theverge.com/rss/index.xml"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H07",
-      "title": "AWS DevOps AI Agent & Security Agent 正式发布",
-      "what_changed": "DevOps Agent 与 Security Agent 正式 GA，自动化 CI/CD 诊断修复与安全事件响应。",
-      "why_it_matters": "AWS Agentic Cloud Operations 正式落地，降低运营成本，与 Azure/Google Cloud 竞争关键节点。",
+      "title": "Claude Code 自动模式解析 + GitHub CodeQL 声明式安全建模",
+      "what_changed": "过去 24 小时出现了与“Claude Code 自动模式解析 + GitHub CodeQL 声明式安全建模”相关的更新/讨论。来源覆盖 3 个源",
+      "why_it_matters": "这是一条趋势信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "AWS 企业用户",
-        "DevOps 工程师",
-        "云安全团队",
-        "竞争云厂商"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "评估 DevOps Agent 替代现有 runbook",
-        "试点 Security Agent 安全扫描",
-        "对比 Azure Copilot for Security"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "自动修复可能引入错误变更",
-        "安全 Agent 自动响应边界需明确"
-      ],
-      "references": [
-        "https://aws.amazon.com/blogs/aws/feed/"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H08",
-      "title": "供应链安全警报",
-      "what_changed": "朝鲜黑客长期潜伏劫持热门 npm 包；BrowserStack 本地代理泄露私钥及邮箱。",
-      "why_it_matters": "供应链攻击已是系统性威胁，开源安全护城河亟需加强，测试工具存在安全缺陷。",
+      "title": "Daemon Tools 供应链攻击：中国黑客植入后门长达一个月",
+      "what_changed": "过去 24 小时出现了与“Daemon Tools 供应链攻击：中国黑客植入后门长达一个月”相关的更新/讨论。来源覆盖 2 个源",
+      "why_it_matters": "这是一条重要更新信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "所有使用 npm 的开发者",
-        "使用 BrowserStack 的企业",
-        "开源维护者",
-        "企业安全团队"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队"
       ],
       "next_actions": [
-        "审查 npm 依赖完整性验证",
-        "审计 BrowserStack 代理私钥权限",
-        "启用包锁定验证 checksum",
-        "部署持续供应链监控"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "历史感染可能已存在",
-        "私钥未轮换将持续构成威胁"
-      ],
-      "references": [
-        "https://www.wired.com/feed/rss"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H09",
-      "title": "Cloudflare Organizations GA",
-      "what_changed": "Cloudflare 推出 Organizations 多账户统一管理功能，解决企业碎片化管理痛点。",
-      "why_it_matters": "Cloudflare 向企业市场深度渗透，具备与 AWS Organizations 竞争的多账户治理能力。",
+      "title": "Meta 版权风波：扎克伯格被指亲自授权 AI 训练数据侵权",
+      "what_changed": "过去 24 小时出现了与“Meta 版权风波：扎克伯格被指亲自授权 AI 训练数据侵权”相关的更新/讨论。来源覆盖 3 个源",
+      "why_it_matters": "这是一条趋势信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "企业 IT/安全架构师",
-        "Cloudflare 大型客户",
-        "MSP 托管服务提供商"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "评估迁移至 Organizations 架构",
-        "关注与 Zero Trust/SASE 集成深度"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "迁移需重新审视账户权限模型"
-      ],
-      "references": [
-        "https://blog.cloudflare.com/rss/"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H10",
-      "title": "AI 经济与就业",
-      "what_changed": "OpenAI 机器人税/公共财富基金框架；MIT Tech Review 职业 AI 关联数据研究；AI 重塑小型电商决策流程。",
-      "why_it_matters": "AI 劳动市场冲击从宏观进入微观现实，机器人税政策将进入立法议程。",
+      "title": "Microsoft Xbox 战略重组：Xbox Copilot AI 被砍",
+      "what_changed": "过去 24 小时出现了与“Microsoft Xbox 战略重组：Xbox Copilot AI 被砍”相关的更新/讨论。来源覆盖 2 个源",
+      "why_it_matters": "这是一条重要更新信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "电商从业者",
-        "劳工政策制定者",
-        "企业 CFO",
-        "普通工作者"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "关注 G20/OECD AI 税收政策",
-        "制定团队 AI 再培训计划",
-        "跟踪政策白皮书落地进展"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "机器人税增加 AI 密集型企业合规成本",
-        "过度依赖 AI 工具的脆弱性"
-      ],
-      "references": [
-        "https://techcrunch.com/feed/",
-        "https://www.technologyreview.com/feed/"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H11",
-      "title": "量子计算时间线重估",
-      "what_changed": "密码学工程师质疑量子计算 10 年破解 RSA 的预测，NIST 后量子标准化进度落后。",
-      "why_it_matters": "密码基础设施迁移速度严重不足，实际时间窗口可能更短，PKI 迁移规划需加速。",
+      "title": "Cloudflare Flagship 边缘 Feature Flag + Figma Redis 代理六个九可用性",
+      "what_changed": "过去 24 小时出现了与“Cloudflare Flagship 边缘 Feature Flag + Figma Redis 代理六个九可用性”相关的更新/讨论。来源覆盖 2 个源",
+      "why_it_matters": "这是一条重要更新信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "企业 CISO",
-        "金融机构",
-        "政府/国防部门",
-        "密码学工具链维护者"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "评估 PQC 迁移就绪度",
-        "跟踪 NIST FIPS 203/204/205 标准实施",
-        "制定 Crypto-Agility 路线图"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "迁移窗口可能比预期更短",
-        "Harvest Now Decrypt Later 攻击已在进行"
-      ],
-      "references": [
-        "https://feeds.arstechnica.com/arstechnica/index"
-      ]
+      "risk_notes": [],
+      "references": []
     },
     {
       "hotspot_id": "H12",
-      "title": "Google 开源 Scion & 离线 AI 听写",
-      "what_changed": "Google 开源多智能体编排测试床 Scion；上线可离线工作的 AI 听写应用。",
-      "why_it_matters": "Scion 布局 MCP/Agent 框架竞争，与 Anthropic MCP、OpenAI Swarm 形成三足鼎立。离线 AI 预示端侧 AI 商业化加速。",
+      "title": "SAP 豪投 11.6 亿美元押注德国 18 个月 AI 新秀 NemoClaw",
+      "what_changed": "过去 24 小时出现了与“SAP 豪投 11.6 亿美元押注德国 18 个月 AI 新秀 NemoClaw”相关的更新/讨论。来源覆盖 1 个源",
+      "why_it_matters": "这是一条重要更新信号，可能影响工程决策、工具链选择或研究方向。",
       "who_is_impacted": [
-        "AI 平台工程师",
-        "移动应用开发者",
-        "隐私敏感行业",
-        "Google Cloud 竞争对手"
+        "开发者",
+        "技术管理者",
+        "产品/平台团队",
+        "关注相关公司动态的人群"
       ],
       "next_actions": [
-        "对比 Scion 与 LangGraph/CrewAI",
-        "测试端侧 AI 听写替代云端转录",
-        "关注 Scion 集成 Vertex AI 进展"
+        "查看引用链接确认原文",
+        "判断是否需要在团队内同步",
+        "如果涉及工具更新，评估升级/迁移成本"
       ],
-      "risk_notes": [
-        "实验性项目 API 稳定性存疑",
-        "端侧 AI 版本碎片化风险"
-      ],
-      "references": [
-        "https://news.ycombinator.com/rss"
-      ]
+      "risk_notes": [],
+      "references": []
     }
   ]
 }
