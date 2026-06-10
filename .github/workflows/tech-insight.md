@@ -8,7 +8,9 @@ permissions:
 tools:
   bash: [":*"]
   edit:
-engine: copilot
+engine:
+  id: copilot
+  model: "gpt-5.4?effort=low"
 timeout-minutes: 45
 network:
   allowed:
