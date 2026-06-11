@@ -1,1 +1,663 @@
-{"mode": "fallback", "top_k": 12, "hotspots": [{"hotspot_id": "H17", "title": "Automakers' share in China's NEV exports in May: BYD ranks first with 36.7%, Tesla 4th with 9.1%", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 74, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "Automakers' share in China's NEV exports in May: BYD ranks first with 36.7%, Tesla 4th with 9.1%", "url": "https://cnevpost.com/2026/06/10/automakers-share-china-nev-exports-may-2026/", "published_at": "2026-06-10T04:03:27Z", "company": null, "signal_level": "S"}, {"platform": "cnevpost", "title": "Automakers' share in China's NEV market in May: BYD ranks first with 21.8%, Tesla returns to top five", "url": "https://cnevpost.com/2026/06/10/automakers-share-china-nev-market-may-2026/", "published_at": "2026-06-10T02:13:01Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H01", "title": "China's NEV retail sales fall 14% in first week of June as penetration climbs to 66.7%", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "China's NEV retail sales fall 14% in first week of June as penetration climbs to 66.7%", "url": "https://cnevpost.com/2026/06/11/china-nev-retail-fall-first-week-june-penetration-climbs/", "published_at": "2026-06-11T00:53:00Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H02", "title": "BYD Great Han reveals core specs with up to 764 hp and 1,008 km range", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["carnewschina"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "carnewschina", "title": "BYD Great Han reveals core specs with up to 764 hp and 1,008 km range", "url": "https://carnewschina.com/2026/06/10/byd-great-han-reveals-core-specs-with-up-to-764-hp-and-1008-km-range/", "published_at": "2026-06-10T16:11:08Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H03", "title": "BYD Denza Z electric sports car appears in regulatory filing with top speed of 350 km/h", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "BYD Denza Z electric sports car appears in regulatory filing with top speed of 350 km/h", "url": "https://cnevpost.com/2026/06/10/byd-denza-z-electric-sports-car-appears-in-regulatory-filing/", "published_at": "2026-06-10T13:51:03Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H04", "title": "Li Auto's i8 SUV gets single-motor variant in filing, hinting at lower price", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "Li Auto's i8 SUV gets single-motor variant in filing, hinting at lower price", "url": "https://cnevpost.com/2026/06/10/li-auto-i8-gets-single-motor-variant-in-filing/", "published_at": "2026-06-10T13:18:00Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H05", "title": "Xiaomi cleared to build extended-range EVs at Beijing plant as new SUV launch looms", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "Xiaomi cleared to build extended-range EVs at Beijing plant as new SUV launch looms", "url": "https://cnevpost.com/2026/06/10/xiaomi-cleared-to-build-extended-range-evs/", "published_at": "2026-06-10T12:47:03Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H06", "title": "BYD's flagship sedan Da Han shows up in regulatory filing with length of over 5.2 meters", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "BYD's flagship sedan Da Han shows up in regulatory filing with length of over 5.2 meters", "url": "https://cnevpost.com/2026/06/10/byd-da-han-shows-up-regulatory-filing/", "published_at": "2026-06-10T12:23:09Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H07", "title": "Nio Firefly sells out new limited edition EV in under eight hours", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "Nio Firefly sells out new limited edition EV in under eight hours", "url": "https://cnevpost.com/2026/06/10/nio-firefly-sells-out-new-limited-edition-8-hours/", "published_at": "2026-06-10T11:24:46Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H08", "title": "Nio Onvo to hold launch event on June 11 evening for new L60 with 106 upgrades", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "Nio Onvo to hold launch event on June 11 evening for new L60 with 106 upgrades", "url": "https://cnevpost.com/2026/06/10/nio-onvo-to-hold-launch-event-jun-11-evening-new-l60/", "published_at": "2026-06-10T10:20:34Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H09", "title": "China's gasoline car sales plunge 41.8% in May as combustion era fades", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "China's gasoline car sales plunge 41.8% in May as combustion era fades", "url": "https://cnevpost.com/2026/06/10/china-gasoline-car-sales-plunge/", "published_at": "2026-06-10T10:02:12Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H10", "title": "Nio helps shape Singapore's new standard for EV charging and battery swap", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "Nio helps shape Singapore's new standard for EV charging and battery swap", "url": "https://cnevpost.com/2026/06/10/nio-helps-shape-singapore-standard-charging-battery-swap/", "published_at": "2026-06-10T09:27:48Z", "company": null, "signal_level": "S"}]}, {"hotspot_id": "H11", "title": "China's May NEV sales stabilize as strong exports offset domestic slump, CAAM data shows", "summary": "tracks=china_ev", "category": "single", "overall_heat_score": 70, "coverage": {"source_count": 1, "companies": [], "platforms": ["cnevpost"]}, "should_chase": "yes", "chase_rationale": [], "samples": [{"platform": "cnevpost", "title": "China's May NEV sales stabilize as strong exports offset domestic slump, CAAM data shows", "url": "https://cnevpost.com/2026/06/10/china-may-2026-nev-sales-caam/", "published_at": "2026-06-10T08:32:32Z", "company": null, "signal_level": "S"}]}]}
+{
+  "mode": "llm",
+  "top_k": 12,
+  "hotspots": [
+    {
+      "hotspot_id": "H01",
+      "title": "BYD 全球扩张提速：超越福特、挑战丰田、引发美国制裁争议",
+      "summary": "BYD 销量超越福特，宣布目标挑战丰田全球第一，同时向加拿大与欧洲部署5分钟极速充电，并对特朗普政府将其列入五角大楼军事黑名单提起诉讼。多平台多角度共振报道。",
+      "category": "trend",
+      "overall_heat_score": 98,
+      "coverage": {
+        "source_count": 5,
+        "companies": [
+          "BYD",
+          "Toyota",
+          "Ford"
+        ],
+        "platforms": [
+          "electrek",
+          "cnevpost",
+          "theverge-transport",
+          "cleantechnica",
+          "insideevs"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "BYD 超越福特是全球汽车格局重要里程碑",
+        "5分钟充电技术在欧加落地影响充电生态",
+        "被列入军事黑名单引发地缘政治与贸易风险"
+      ],
+      "samples": [
+        {
+          "platform": "electrek",
+          "title": "BYD outsold Ford, and now it thinks it can catch Toyota as the world's No. 1 automaker",
+          "url": "https://electrek.co/2026/06/10/byd-outsold-ford-toyota/",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "A"
+        },
+        {
+          "platform": "electrek",
+          "title": "BYD is bringing its 5-min 'Flash' electric car charging to Canada",
+          "url": "https://electrek.co/2026/06/10/byd-flash-charging-canada/",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "A"
+        },
+        {
+          "platform": "electrek",
+          "title": "BYD threatens to sue Trump administration over Pentagon military list",
+          "url": "https://electrek.co/2026/06/10/byd-sues-trump-pentagon/",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "A"
+        },
+        {
+          "platform": "theverge-transport",
+          "title": "BYD to install thousands of 5-minute EV chargers across Europe",
+          "url": "https://www.theverge.com/transportation/2026/06/10/byd-flash-charging-europe",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "B"
+        },
+        {
+          "platform": "cleantechnica",
+          "title": "BYD: World's Largest Automaker In 5 Years",
+          "url": "https://cleantechnica.com/2026/06/10/byd-worlds-largest-automaker/",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "A"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H02",
+      "title": "中国新能源汽车5月销量数据：电动车市占率62.9%，燃油车同比暴跌41.8%",
+      "summary": "中国新能源汽车5月数据显示电动车市占率已达62.9%，燃油车销量同比暴跌41.8%，6月第一周NEV零售环比下降14%但渗透率仍在攀升。BYD在NEV出口中占36.7%位居第一，特斯拉第二。",
+      "category": "trend",
+      "overall_heat_score": 95,
+      "coverage": {
+        "source_count": 3,
+        "companies": [
+          "BYD",
+          "Tesla",
+          "SAIC"
+        ],
+        "platforms": [
+          "cnevpost",
+          "carnewschina",
+          "cleantechnica"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "市占率62.9%标志着燃油车退出加速进入拐点",
+        "出口数据反映中国品牌全球化竞争格局"
+      ],
+      "samples": [
+        {
+          "platform": "carnewschina",
+          "title": "Electric cars occupied 62.9% of the market share in May 2026 in China",
+          "url": "https://carnewschina.com/2026/06/10/china-ev-market-share-may-2026/",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "China's gasoline car sales plunge 41.8% in May as combustion era fades",
+          "url": "https://cnevpost.com/2026/06/10/china-gasoline-car-sales-may/",
+          "published_at": "2026-06-10",
+          "company": "",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "Automakers' share in China's NEV exports in May: BYD ranks first with 36.7%, Tesla second",
+          "url": "https://cnevpost.com/2026/06/10/china-nev-exports-may-byd-tesla/",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "China's NEV retail sales fall 14% in first week of June as penetration climbs",
+          "url": "https://cnevpost.com/2026/06/11/china-nev-sales-june-first-week/",
+          "published_at": "2026-06-11",
+          "company": "",
+          "signal_level": "S"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H03",
+      "title": "吉利、BYD、理想等多品牌密集发布新车型与规划",
+      "summary": "吉利 Starship 7 以不到1万5千美元的价格进军低价电动SUV；BYD 大汉旗舰轿车、Denza Z电动跑车亮相监管备案；理想i8 SUV单电机版出现备案暗示低价版；Nio Onvo L60将于6月11日发布106项升级。",
+      "category": "trend",
+      "overall_heat_score": 88,
+      "coverage": {
+        "source_count": 4,
+        "companies": [
+          "Geely",
+          "BYD",
+          "Li Auto",
+          "NIO"
+        ],
+        "platforms": [
+          "cnevpost",
+          "carnewschina",
+          "electrek",
+          "insideevs"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "新车型密集发布加剧中国EV内卷",
+        "低价SUV竞争影响全球市场定价策略"
+      ],
+      "samples": [
+        {
+          "platform": "cnevpost",
+          "title": "Geely's Starship 7 EV hits market at under $15,000 in latest push into budget electric SUV segment",
+          "url": "https://cnevpost.com/2026/06/11/geely-starship-7-ev-hits-market/",
+          "published_at": "2026-06-11",
+          "company": "Geely",
+          "signal_level": "S"
+        },
+        {
+          "platform": "carnewschina",
+          "title": "BYD Great Han reveals core specs with up to 764 hp and 1,008 km range",
+          "url": "https://carnewschina.com/2026/06/10/byd-great-han-specs/",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "BYD Denza Z electric sports car appears in regulatory filing with top speed of 300 km/h+",
+          "url": "https://cnevpost.com/2026/06/10/byd-denza-z-regulatory-filing/",
+          "published_at": "2026-06-10",
+          "company": "BYD",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "Li Auto's i8 SUV gets single-motor variant in filing, hinting at lower price",
+          "url": "https://cnevpost.com/2026/06/10/li-auto-i8-single-motor/",
+          "published_at": "2026-06-10",
+          "company": "Li Auto",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "Nio Onvo to hold launch event on June 11 evening for new L60 with 106 upgrades",
+          "url": "https://cnevpost.com/2026/06/10/nio-onvo-l60-launch/",
+          "published_at": "2026-06-10",
+          "company": "NIO",
+          "signal_level": "S"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H04",
+      "title": "电池技术突破与争议：GM无锂电池、固态电池虚假宣传被揭穿",
+      "summary": "通用汽车押注无锂电池技术路线；YouTuber 揭穿 Donut Lab 固态电池虚假宣传，反映固态电池商业化尚远；CATL 投资 DeepSeek 以 AI 能源战略布局；BASF 发布固态电池聚异丁烯粘合剂。",
+      "category": "trend",
+      "overall_heat_score": 85,
+      "coverage": {
+        "source_count": 4,
+        "companies": [
+          "GM",
+          "CATL",
+          "BASF"
+        ],
+        "platforms": [
+          "electrek",
+          "insideevs",
+          "chargedevs",
+          "pandaily"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "无锂电池可颠覆锂矿供应链格局",
+        "固态电池商业化时间表引发投资者关注",
+        "CATL+DeepSeek AI战略影响全行业"
+      ],
+      "samples": [
+        {
+          "platform": "electrek",
+          "title": "GM is betting on battery cells that don't use lithium",
+          "url": "https://electrek.co/2026/06/10/gm-no-lithium-battery/",
+          "published_at": "2026-06-10",
+          "company": "GM",
+          "signal_level": "A"
+        },
+        {
+          "platform": "insideevs",
+          "title": "A YouTuber Debunked Donut Lab's Solid State Claims. It Reveals Something Huge About EV Battery Hype",
+          "url": "https://insideevs.com/2026/06/10/solid-state-battery-donut-lab-debunked/",
+          "published_at": "2026-06-10",
+          "company": "",
+          "signal_level": "A"
+        },
+        {
+          "platform": "pandaily",
+          "title": "CATL Invests in DeepSeek: Zeng Yuqun's AI Energy Strategy Takes Shape",
+          "url": "https://pandaily.com/2026/06/10/catl-invests-deepseek/",
+          "published_at": "2026-06-10",
+          "company": "CATL",
+          "signal_level": "A"
+        },
+        {
+          "platform": "chargedevs",
+          "title": "BASF introduces a new polyisobutene binder for solid-state battery cathode, anode and separator",
+          "url": "https://chargedevs.com/2026/06/10/basf-solid-state-battery-binder/",
+          "published_at": "2026-06-10",
+          "company": "BASF",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H05",
+      "title": "美国EV销量创联邦税收抵免结束后最佳月份，Rivian R2正式亮相",
+      "summary": "联邦EV税收抵免结束后美国EV销量达最好月份；Rivian R2正式发布进入大众市场；福特$3万电动皮卡首次被目击；BMW已售出超万辆iX3；Mercedes GLC EV小电池版无续航焦虑。",
+      "category": "trend",
+      "overall_heat_score": 82,
+      "coverage": {
+        "source_count": 4,
+        "companies": [
+          "Rivian",
+          "Ford",
+          "BMW",
+          "Mercedes"
+        ],
+        "platforms": [
+          "electrek",
+          "insideevs",
+          "cleantechnica"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "美国市场在无补贴环境下企稳是重要信号",
+        "Rivian R2定价策略影响中档EV市场竞争格局"
+      ],
+      "samples": [
+        {
+          "platform": "electrek",
+          "title": "EV sales just hit their best month since federal tax credits ended",
+          "url": "https://electrek.co/2026/06/10/ev-sales-best-month-post-tax-credits/",
+          "published_at": "2026-06-10",
+          "company": "",
+          "signal_level": "A"
+        },
+        {
+          "platform": "cleantechnica",
+          "title": "The Rivian R2 Is Here!",
+          "url": "https://cleantechnica.com/2026/06/10/rivian-r2-launch/",
+          "published_at": "2026-06-10",
+          "company": "Rivian",
+          "signal_level": "A"
+        },
+        {
+          "platform": "electrek",
+          "title": "Ford's $30,000 EV pickup was just spotted in the wild for the first time",
+          "url": "https://electrek.co/2026/06/10/ford-30000-ev-pickup-spotted/",
+          "published_at": "2026-06-10",
+          "company": "Ford",
+          "signal_level": "A"
+        },
+        {
+          "platform": "insideevs",
+          "title": "BMW Has Already Sold Over 10,000 iX3 EVs",
+          "url": "https://insideevs.com/2026/06/10/bmw-ix3-10000-sold/",
+          "published_at": "2026-06-10",
+          "company": "BMW",
+          "signal_level": "A"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H06",
+      "title": "小米汽车YU7库存争议与55万目标压力，Xpeng进军机器人与游艇",
+      "summary": "小米汽车面临55万辆目标压力，YU7库存争议引发市场质疑；小鹏CEO亲自掌管机器人业务推动物理AI转型；小鹏传闻进军游艇产业延伸陆海空出行布局；小米已获批在北京工厂生产增程电动车。",
+      "category": "trend",
+      "overall_heat_score": 79,
+      "coverage": {
+        "source_count": 2,
+        "companies": [
+          "Xiaomi",
+          "XPeng"
+        ],
+        "platforms": [
+          "cnevpost",
+          "carnewschina"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "小米YU7目标压力反映新势力产能与需求博弈",
+        "小鹏机器人战略是中国EV企业向AI平台转型的风向标"
+      ],
+      "samples": [
+        {
+          "platform": "carnewschina",
+          "title": "Xiaomi facing 550,000 target pressure as YU7 inventory controversy sparks \"Xunti\" campaign",
+          "url": "https://carnewschina.com/2026/06/10/xiaomi-550k-target-yu7-inventory/",
+          "published_at": "2026-06-10",
+          "company": "Xiaomi",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "Xiaomi cleared to build extended-range EVs at Beijing plant as new SUV launch looms",
+          "url": "https://cnevpost.com/2026/06/10/xiaomi-extended-range-ev-approval/",
+          "published_at": "2026-06-10",
+          "company": "Xiaomi",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "Xpeng CEO takes helm of robotics unit to drive physical AI transition",
+          "url": "https://cnevpost.com/2026/06/10/xpeng-ceo-robotics-unit/",
+          "published_at": "2026-06-10",
+          "company": "XPeng",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "Xpeng reportedly enters yacht industry, expanding its land, sea and air mobility ecosystem",
+          "url": "https://cnevpost.com/2026/06/10/xpeng-yacht-industry/",
+          "published_at": "2026-06-10",
+          "company": "XPeng",
+          "signal_level": "S"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H07",
+      "title": "Nio生态扩张：Firefly限量版秒罄、新加坡充换电标准、Onvo L60发布",
+      "summary": "Nio Firefly 8-bit主题限量版在不到8小时内售罄；Nio 参与制定新加坡EV充电与换电标准；Nio Onvo品牌宣布于6月11日晚举行发布会推出106项升级的L60。",
+      "category": "trend",
+      "overall_heat_score": 75,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "NIO"
+        ],
+        "platforms": [
+          "cnevpost"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "Firefly秒罄显示Nio子品牌在年轻群体的号召力",
+        "Nio参与标准制定体现其在东南亚充换电生态的布局"
+      ],
+      "samples": [
+        {
+          "platform": "cnevpost",
+          "title": "Nio Firefly sells out new limited edition EV in under eight hours",
+          "url": "https://cnevpost.com/2026/06/10/nio-firefly-limited-edition-sells-out/",
+          "published_at": "2026-06-10",
+          "company": "NIO",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "Nio Firefly launches 8-bit themed limited edition EV to attract young commuters",
+          "url": "https://cnevpost.com/2026/06/10/nio-firefly-8-bit-limited-edition/",
+          "published_at": "2026-06-10",
+          "company": "NIO",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "Nio helps shape Singapore's new standard for EV charging and battery swap",
+          "url": "https://cnevpost.com/2026/06/10/nio-singapore-ev-standard/",
+          "published_at": "2026-06-10",
+          "company": "NIO",
+          "signal_level": "S"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H08",
+      "title": "特斯拉FSD政策争议与多项进展：Cybertruck转让收费、Model 3超EPA续航、Semi国际测试",
+      "summary": "特斯拉不允许Cybertruck买家免费转让FSD，引发用户强烈抗议；Model 3在续航测试中达到400英里，超EPA标准30英里；Tesla Semi开展国际市场测试；特斯拉电池业务受到行业广泛关注。",
+      "category": "trend",
+      "overall_heat_score": 72,
+      "coverage": {
+        "source_count": 4,
+        "companies": [
+          "Tesla"
+        ],
+        "platforms": [
+          "insideevs",
+          "techcrunch-transport",
+          "thedriven",
+          "electrek"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "FSD转让政策争议反映特斯拉软件盈利策略调整",
+        "Model 3超EPA续航影响消费者信心"
+      ],
+      "samples": [
+        {
+          "platform": "insideevs",
+          "title": "Tesla Apparently Won't Let Cybertruck Buyers Transfer FSD Without Spending Another $8,000",
+          "url": "https://insideevs.com/2026/06/10/tesla-cybertruck-fsd-transfer-fee/",
+          "published_at": "2026-06-10",
+          "company": "Tesla",
+          "signal_level": "A"
+        },
+        {
+          "platform": "insideevs",
+          "title": "This Tesla Model 3 Went Nearly 400 Miles In A Range Test, 30 More Than Its EPA Rating",
+          "url": "https://insideevs.com/2026/06/10/tesla-model-3-400-mile-range-test/",
+          "published_at": "2026-06-10",
+          "company": "Tesla",
+          "signal_level": "A"
+        },
+        {
+          "platform": "thedriven",
+          "title": "Tesla Semi electric truck tests out international markets",
+          "url": "https://thedriven.io/2026/06/10/tesla-semi-international-markets/",
+          "published_at": "2026-06-10",
+          "company": "Tesla",
+          "signal_level": "B"
+        },
+        {
+          "platform": "techcrunch-transport",
+          "title": "Everyone wants a piece of Tesla's battery business",
+          "url": "https://techcrunch.com/2026/06/10/tesla-battery-business/",
+          "published_at": "2026-06-10",
+          "company": "Tesla",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H09",
+      "title": "Lucid Motors高管离职浪潮与新CEO权力交接",
+      "summary": "Lucid Motors 顶级工程师在新CEO上任后离职，高管团队动荡持续；TechCrunch也跟进报道Lucid Motors高管离职事件，反映公司内部变革。",
+      "category": "trend",
+      "overall_heat_score": 68,
+      "coverage": {
+        "source_count": 2,
+        "companies": [
+          "Lucid Motors"
+        ],
+        "platforms": [
+          "insideevs",
+          "techcrunch-transport"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "高管团队动荡可能影响Lucid产品路线图与融资前景"
+      ],
+      "samples": [
+        {
+          "platform": "insideevs",
+          "title": "Lucid's Top Engineer Departs The EV Startup As New CEO Takes Over",
+          "url": "https://insideevs.com/2026/06/10/lucid-top-engineer-departs/",
+          "published_at": "2026-06-10",
+          "company": "Lucid Motors",
+          "signal_level": "A"
+        },
+        {
+          "platform": "techcrunch-transport",
+          "title": "Top Lucid Motors executive departs amid new CEO's leadership shake-up",
+          "url": "https://techcrunch.com/2026/06/10/lucid-executive-departs-ceo/",
+          "published_at": "2026-06-10",
+          "company": "Lucid Motors",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H10",
+      "title": "吉利Zeekr 5月销量夺冠与新技术发布：极氪8X、发动机热效率新纪录",
+      "summary": "吉利旗下Zeekr 8X以6103辆在高端EV细分市场称霸5月；吉利Emgrand i-HEV混动版将于6月16日发布，搭载全球最高发动机热效率技术，代表中国混动技术再次突破。",
+      "category": "trend",
+      "overall_heat_score": 65,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "Geely",
+          "Zeekr"
+        ],
+        "platforms": [
+          "carnewschina",
+          "thedriven"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "Zeekr销量突破验证吉利高端EV路线成功",
+        "热效率新纪录预示混动技术持续演进"
+      ],
+      "samples": [
+        {
+          "platform": "carnewschina",
+          "title": "Geely's Zeekr 8X claims segment crown with 6,103 units sold in May 2026",
+          "url": "https://carnewschina.com/2026/06/10/zeekr-8x-may-sales/",
+          "published_at": "2026-06-10",
+          "company": "Zeekr",
+          "signal_level": "S"
+        },
+        {
+          "platform": "carnewschina",
+          "title": "Geely Emgrand i-HEV set to launch June 16 with world's highest engine thermal efficiency",
+          "url": "https://carnewschina.com/2026/06/10/geely-emgrand-ihev-launch/",
+          "published_at": "2026-06-10",
+          "company": "Geely",
+          "signal_level": "S"
+        },
+        {
+          "platform": "thedriven",
+          "title": "Zeekr reaches major milestone in the premium EV market",
+          "url": "https://thedriven.io/2026/06/10/zeekr-premium-ev-milestone/",
+          "published_at": "2026-06-10",
+          "company": "Zeekr",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H11",
+      "title": "Waymo与自动驾驶：人类反应研究、机器人出租车基准测试",
+      "summary": "Waymo 发布虚拟驾驶员研究人类对路面意外反应；Waymo建立全新机器人出租车vs人类驾驶员基准测试体系；B2U与Waymo合作为自动驾驶电动车队退役电池提供第二生命应用。",
+      "category": "trend",
+      "overall_heat_score": 60,
+      "coverage": {
+        "source_count": 3,
+        "companies": [
+          "Waymo"
+        ],
+        "platforms": [
+          "theverge-transport",
+          "techcrunch-transport",
+          "chargedevs"
+        ]
+      },
+      "should_chase": "no",
+      "chase_rationale": [
+        "Waymo安全测试数据验证自动驾驶商业落地进展"
+      ],
+      "samples": [
+        {
+          "platform": "theverge-transport",
+          "title": "Waymo built a virtual driver to study how humans react to surprises on the road",
+          "url": "https://www.theverge.com/transportation/2026/06/10/waymo-virtual-driver-study",
+          "published_at": "2026-06-10",
+          "company": "Waymo",
+          "signal_level": "B"
+        },
+        {
+          "platform": "techcrunch-transport",
+          "title": "Waymo says it built a better benchmark for comparing robotaxis to humans",
+          "url": "https://techcrunch.com/2026/06/10/waymo-robotaxi-benchmark/",
+          "published_at": "2026-06-10",
+          "company": "Waymo",
+          "signal_level": "B"
+        },
+        {
+          "platform": "chargedevs",
+          "title": "B2U and Waymo partner to give autonomous EV fleet batteries a second life",
+          "url": "https://chargedevs.com/2026/06/10/b2u-waymo-battery-second-life/",
+          "published_at": "2026-06-10",
+          "company": "Waymo",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H12",
+      "title": "Chrysler Pacifica PHEV大规模召回、Kia EV2超续航表现",
+      "summary": "Chrysler Pacifica 插电混动版因安全问题大规模召回，要求车主停止室内停车；Kia EV2在真实续航测试中达到官方续航105%，在欧洲轻型EV市场表现出色。",
+      "category": "single",
+      "overall_heat_score": 55,
+      "coverage": {
+        "source_count": 2,
+        "companies": [
+          "Chrysler",
+          "Kia"
+        ],
+        "platforms": [
+          "insideevs",
+          "electrek"
+        ]
+      },
+      "should_chase": "no",
+      "chase_rationale": [
+        "Chrysler PHEV召回凸显传统车企电气化品控挑战"
+      ],
+      "samples": [
+        {
+          "platform": "insideevs",
+          "title": "Chrysler Recalls America's Only Plug-In Hybrid Minivan, Tells Owners To Park Outside",
+          "url": "https://insideevs.com/2026/06/10/chrysler-pacifica-phev-recall/",
+          "published_at": "2026-06-10",
+          "company": "Chrysler",
+          "signal_level": "A"
+        },
+        {
+          "platform": "electrek",
+          "title": "Kia EV2 delivers 105% of its official range estimate in the real world, ranking among the best",
+          "url": "https://electrek.co/2026/06/10/kia-ev2-range-test-105-percent/",
+          "published_at": "2026-06-10",
+          "company": "Kia",
+          "signal_level": "A"
+        }
+      ]
+    }
+  ]
+}
