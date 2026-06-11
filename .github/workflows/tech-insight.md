@@ -8,8 +8,6 @@ permissions:
 tools:
   bash: [":*"]
   edit:
-engine:
-  id: copilot
 timeout-minutes: 45
 network:
   allowed:
@@ -40,33 +38,6 @@ safe-outputs:
   create-pull-request:
     title-prefix: "[tech-insight] "
     labels: [automation, tech-insight]
-  threat-detection:
-    steps:
-      - name: Configure GitHub CLI auth for Copilot CLI
-        env:
-          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          export XDG_CONFIG_HOME="$HOME"
-          printf '%s\n' "$COPILOT_GITHUB_TOKEN" | gh auth login --hostname github.com --with-token
-          gh auth status --hostname github.com >/dev/null
-          mkdir -p "$HOME/.config"
-          rm -rf "$HOME/.config/gh"
-          cp -R "$HOME/gh" "$HOME/.config/gh"
-          chmod -R go-rwx "$HOME/gh" "$HOME/.config/gh"
-steps:
-  - name: Configure GitHub CLI auth for Copilot CLI
-    env:
-      COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
-    run: |
-      set -euo pipefail
-      export XDG_CONFIG_HOME="$HOME"
-      printf '%s\n' "$COPILOT_GITHUB_TOKEN" | gh auth login --hostname github.com --with-token
-      gh auth status --hostname github.com >/dev/null
-      mkdir -p "$HOME/.config"
-      rm -rf "$HOME/.config/gh"
-      cp -R "$HOME/gh" "$HOME/.config/gh"
-      chmod -R go-rwx "$HOME/gh" "$HOME/.config/gh"
 mcp-scripts:
   tech-read-source-list:
     description: "Read RSS source list configuration"
