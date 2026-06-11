@@ -1,5 +1,5 @@
 ---
-name: Tech Insight Workflow
+name: EV Insight Workflow
 on:
   workflow_dispatch:
 strict: false
@@ -13,31 +13,20 @@ network:
   allowed:
     - defaults
     - python
-    - "openai.com"
-    - "github.blog"
-    - "devblogs.microsoft.com"
-    - "blog.google"
-    - "aws.amazon.com"
-    - "blogs.nvidia.com"
-    - "developer.apple.com"
-    - "blog.cloudflare.com"
-    - "deepmind.google"
-    - "huggingface.co"
-    - "news.ycombinator.com"
-    - "www.producthunt.com"
-    - "techcrunch.com"
+    - "cnevpost.com"
+    - "carnewschina.com"
+    - "pandaily.com"
+    - "electrek.co"
+    - "insideevs.com"
+    - "cleantechnica.com"
+    - "thedriven.io"
     - "www.theverge.com"
-    - "feeds.arstechnica.com"
-    - "www.wired.com"
-    - "www.technologyreview.com"
-    - "feed.infoq.com"
-    - "www.infoq.com"
-    - "lobste.rs"
-    - "dev.to"
+    - "techcrunch.com"
+    - "chargedevs.com"
 safe-outputs:
   create-pull-request:
-    title-prefix: "[tech-insight] "
-    labels: [automation, tech-insight]
+    title-prefix: "[ev-insight] "
+    labels: [automation, ev-insight]
 mcp-scripts:
   tech-read-source-list:
     description: "Read RSS source list configuration"
@@ -170,9 +159,9 @@ mcp-scripts:
       echo "{\"path\": \"$INPUT_PATH\", \"text\": $(echo $INPUT_TEXT | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))'), \"overwrite\": ${INPUT_OVERWRITE:-true}}" | python3 Lab-01-Tech-Insights/mcp-scripts/write_text_file.py
 ---
 
-# Tech Insight 工作流
+# EV 市场洞察与竞争雷达工作流
 
-目标：以仓库根目录相对路径运行 Lab-01 Tech Insights 主流程，替代原有 MAF/Azure 工作流编排；只允许手动触发，不要添加 `schedule` 或任何其他触发器。
+目标：以仓库根目录相对路径运行 Lab-01 EV 市场洞察主流程，聚合电动车（EV）/新能源汽车行业的市场动态与车企竞争信号；只允许手动触发，不要添加 `schedule` 或任何其他触发器。
 
 默认配置如下：
 
@@ -188,8 +177,8 @@ mcp-scripts:
 执行约束：
 
 - 全程只使用仓库根目录相对路径，不要写绝对路径。
-- 不要增加任何原流程之外的能力，不要混入 social insight 内容。
-- 所有面向模型的提示词必须使用中文，并严格沿用原工作流里的中文提示原文。
+- 聚焦电动车与新能源汽车行业（车企动态、销量、新车型、政策、电池与供应链），不要混入无关的泛科技内容。
+- 所有面向模型的提示词必须使用中文。
 - 关键中间产物必须落盘：`raw_signals.json`、`clusters/hotspots.json`、`insights/insights.json`、`report.md`。
 - 最终除写入 `Lab-01-Tech-Insights/output/report.md` 外，还要把同一份 Markdown 写入 `Lab-01-Tech-Insights/frontend/report.md`，并通过 safe-outputs 的提交机制提交 `Lab-01-Tech-Insights/frontend/report.md`。
 
@@ -207,18 +196,18 @@ mcp-scripts:
 1. 基于阶段 1 的原始信号，按下面这段中文提示原文构造聚类请求；必须保留原文语义与结构，仅把占位符替换成实际值与实际 JSON：
 
 ```text
-你是 Tech Hotspot Clustering Agent。
-任务：把过去 {Local.TimeWindowHours} 小时内的文章信号聚合成可行动的主题/更新列表。
+你是 EV 市场热点聚类 Agent。
+任务：把过去 {Local.TimeWindowHours} 小时内的电动车行业文章信号聚合成可行动的主题/更新列表。
 
 ## 输入（严格 JSON）
 {MessageText(Local.RawSignals)}
 
 ## 聚类原则（混合）
-- 先利用结构化元数据分桶：company / signal_level / source_type / include_keywords 派生标签
-- 再在桶内按主题合并（标题 + 摘要 + 链接域名）
+- 先利用结构化元数据分桶：signal_level / source_type / platform / tracks 派生标签
+- 再在桶内按主题合并（标题 + 摘要 + 链接域名），并尽量从文章中识别涉及的车企品牌（如 BYD、Tesla、NIO、XPeng、Li Auto、小米、Volkswagen 等），写入 coverage.companies
 - 需要同时保留两类输出：
   1) cross_source_trends：多来源共振的趋势主题（coverage 高）
-  2) high_signal_singles：单来源但信号强（S/A 或官方更新/Release）的重要更新
+  2) high_signal_singles：单来源但信号强（S/A 或官方发布/财报/新车型）的重要更新
 
 ## 强约束
 - 必须输出严格 JSON（不要代码块，不要解释）
@@ -239,7 +228,7 @@ mcp-scripts:
 1. 基于阶段 2 的热点聚类结果，按下面这段中文提示原文构造洞察请求；必须保留原文语义与结构，仅把占位符替换成实际 JSON：
 
 ```text
-你是 Tech Insight Agent。任务：针对每个热点输出“发生了什么/为什么重要/影响谁/接下来怎么做”。
+你是 EV 市场洞察 Agent。任务：针对每个热点输出“发生了什么/为什么重要/影响谁/接下来怎么做”，站在车企竞争与市场策略视角分析。
 
 ## 输入：热点聚类结果（严格 JSON）
 {MessageText(Local.HotspotClusters)}
@@ -258,14 +247,15 @@ mcp-scripts:
 1. 基于阶段 2 的聚类结果与阶段 3 的洞察结果，按下面这段中文提示原文构造报告请求；必须保留原文语义与结构，仅把占位符替换成实际 JSON：
 
 ```text
-你是 Tech Report Writer。
+你是 EV 市场洞察报告撰写 Agent。
 请基于聚类与洞察生成一份 Markdown 报告（中英混合可接受，但以中文为主），结构包含：
-- 24h 摘要
-- Cross-source Trends（趋势）
-- High-signal Singles（重要单条更新）
-- Company Radar（公司雷达）
-- DevTools Releases（工具链更新）
-- Research Watch（研究趋势）
+- 市场摘要（过去 24h 的关键动态总览）
+- 跨源趋势（多来源共振的行业趋势）
+- 重要单条更新（单一来源但信号强的重要更新）
+- 车企竞争雷达（按车企品牌归类的动态，如 BYD、Tesla、NIO、XPeng、Li Auto、小米等）
+- 新车型与产品发布（新车发布、改款、产品与定价）
+- 政策与销量（补贴/法规/关税、交付与销量数据）
+- 技术与电池研究（电池、充电、智能驾驶等技术进展）
 
 ## 输入：聚类（JSON）
 {MessageText(Local.HotspotClusters)}
