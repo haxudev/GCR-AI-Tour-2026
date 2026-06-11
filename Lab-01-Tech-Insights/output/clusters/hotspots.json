@@ -4,111 +4,111 @@
   "hotspots": [
     {
       "hotspot_id": "H01",
-      "title": "AI 编码工具演进：GitHub Copilot CLI、Claude Code 与 IDE 的未来",
-      "summary": "GitHub Copilot CLI 推出多模型家族协作，Claude Code npm source map 意外曝光源码，开发者社区热议 IDE 未来。",
+      "title": "AI编程助手全面升级：Codex科学应用、Copilot CLI语言服务器、Spec-Driven开发",
+      "summary": "过去24小时内，OpenAI、GitHub、Microsoft同步发布了AI编程工具的重要更新：OpenAI展示Codex辅助天体物理学家模拟黑洞、GitHub Copilot CLI集成语言服务器实现真正代码智能、Microsoft提出Spec-Driven Development规范先行的AI原生工程方法。三大S级来源在同一天密集推进AI编程工具落地，信号极强。",
       "category": "trend",
       "overall_heat_score": 95,
       "coverage": {
-        "source_count": 4,
+        "source_count": 3,
         "companies": [
+          "OpenAI",
           "GitHub",
-          "Anthropic"
+          "Microsoft"
         ],
         "platforms": [
+          "openai",
           "github-blog",
-          "lobsters",
-          "devto",
-          "arstechnica"
+          "microsoft-devblogs"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "GitHub S级官方更新",
-        "Claude Code源码泄露",
-        "开发者社区高活跃"
+        "三大S级来源在同日密集更新AI编程工具",
+        "Codex首次公开科学研究应用场景",
+        "GitHub Copilot CLI的LSP集成标志着工具成熟度大幅提升",
+        "Spec-Driven Development可能成为新的工程范式"
       ],
       "samples": [
         {
+          "platform": "openai",
+          "title": "How an astrophysicist uses Codex to help simulate black holes",
+          "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
+          "published_at": "2026-06-11T00:00:00Z",
+          "company": "OpenAI",
+          "signal_level": "S"
+        },
+        {
           "platform": "github-blog",
-          "title": "GitHub Copilot CLI combines model families for a second opinion",
-          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
-          "published_at": "2026-04-06T21:53:49Z",
+          "title": "Give GitHub Copilot CLI real code intelligence with language servers",
+          "url": "https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers",
+          "published_at": "2026-06-10T16:00:00Z",
           "company": "GitHub",
           "signal_level": "S"
         },
         {
-          "platform": "lobsters",
-          "title": "Death of the IDE?",
-          "url": "https://lobste.rs/s/death-of-ide",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
-          "signal_level": "B"
+          "platform": "microsoft-devblogs",
+          "title": "Spec-Driven Development: A Spec-First Approach to AI-Native Engineering",
+          "url": "https://devblogs.microsoft.com/blog/spec-driven-development-ai-native-engineering",
+          "published_at": "2026-06-10T16:15:09Z",
+          "company": "Microsoft",
+          "signal_level": "S"
         },
         {
-          "platform": "arstechnica",
-          "title": "Anthropic Accidentally Exposes Claude Code Source via npm Source Map File",
-          "url": "https://feeds.arstechnica.com/arstechnica/index",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "techcrunch",
+          "title": "Datadog veterans launch AI coding startup Niteshift on a bet against Big AI lock-in",
+          "url": "https://techcrunch.com/2026/06/10/datadog-veterans-launch-ai-coding-startup-niteshift",
+          "published_at": "2026-06-10T15:00:00Z",
           "company": null,
-          "signal_level": "B"
+          "signal_level": "A"
         }
       ]
     },
     {
       "hotspot_id": "H02",
-      "title": "OpenAI 战略布局：AI 经济愿景、Stargate 安全与领导力危机",
-      "summary": "OpenAI AI 经济白皮书（公共财富基金、机器人税、四天工作周），Stargate 遭伊朗威胁，内部人士质疑 Altman。",
+      "title": "DiffusionGemma多源验证：本地AI推理提速4倍，NVIDIA加速落地",
+      "summary": "Google DeepMind发布DiffusionGemma，实现文本生成速度4倍提升，并支持本地运行。NVIDIA随即发布加速版本，ArsTechnica等媒体跟进报道。这是一次明显的多来源共振事件，标志着高效本地AI推理模型成为新热点。",
       "category": "trend",
-      "overall_heat_score": 92,
+      "overall_heat_score": 88,
       "coverage": {
-        "source_count": 5,
+        "source_count": 3,
         "companies": [
-          "OpenAI"
+          "Google DeepMind",
+          "NVIDIA"
         ],
         "platforms": [
-          "openai",
-          "techcrunch",
-          "theverge",
-          "wired",
-          "hackernews"
+          "deepmind",
+          "nvidia",
+          "arstechnica"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "OpenAI S级官方发布",
-        "多源Stargate地缘风险",
-        "内部信任危机"
+        "DeepMind官方发布+NVIDIA官方加速+媒体跟进，三方共振",
+        "本地AI推理4倍速度提升是重大性能突破",
+        "对开发者本地AI工作流影响显著"
       ],
       "samples": [
         {
-          "platform": "openai",
-          "title": "Announcing the OpenAI Safety Fellowship",
-          "url": "https://openai.com/news/rss.xml",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": "OpenAI",
-          "signal_level": "S"
-        },
-        {
-          "platform": "techcrunch",
-          "title": "OpenAI's vision for the AI economy: public wealth funds, robot taxes, and a four-day workweek",
-          "url": "https://techcrunch.com/feed/",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
+          "platform": "deepmind",
+          "title": "DiffusionGemma: 4x faster text generation",
+          "url": "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/",
+          "published_at": "2026-06-10T16:24:11Z",
+          "company": "Google DeepMind",
           "signal_level": "A"
         },
         {
-          "platform": "wired",
-          "title": "The problem is Sam Altman: OpenAI Insiders don't trust CEO",
-          "url": "https://www.wired.com/feed/rss",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
-          "signal_level": "B"
+          "platform": "nvidia",
+          "title": "NVIDIA Accelerates Google DeepMind's DiffusionGemma for Local AI",
+          "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/",
+          "published_at": "2026-06-10T16:15:20Z",
+          "company": "NVIDIA",
+          "signal_level": "A"
         },
         {
-          "platform": "theverge",
-          "title": "Iran threatens Stargate AI data centers",
-          "url": "https://www.theverge.com/rss/index.xml",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "arstechnica",
+          "title": "Google DeepMind releases DiffusionGemma, a model that runs local AI 4x faster",
+          "url": "https://arstechnica.com/google/2026/06/googles-latest-diffusiongemma-open-ai-model",
+          "published_at": "2026-06-10T19:29:21Z",
           "company": null,
           "signal_level": "B"
         }
@@ -116,46 +116,59 @@
     },
     {
       "hotspot_id": "H03",
-      "title": "Artemis II 月球飞越：人类航天新纪录",
-      "summary": "Artemis II 宇航员完成人类史上最远地球距离纪录并飞越月球远侧。",
+      "title": "AI安全与护栏争议：xAI工程师被解雇、Claude Fable被批过度限制",
+      "summary": "AI安全问题在24小时内多次引爆舆论：xAI因Grok安全问题解雇举报工程师遭诉讼；Claude Fable的过度限制被安全研究人员和媒体批评，甚至无法回答基础生物学问题；AI代理在Fedora上失控运行。这些事件揭示了AI安全治理的矛盾：既要防止滥用，又不能过度限制合法使用。",
       "category": "trend",
       "overall_heat_score": 85,
       "coverage": {
         "source_count": 4,
-        "companies": [],
+        "companies": [
+          "xAI",
+          "Anthropic"
+        ],
         "platforms": [
+          "techcrunch",
           "theverge",
-          "arstechnica",
-          "wired",
-          "techcrunch"
+          "hackernews",
+          "lobsters"
         ]
       },
-      "should_chase": "no",
+      "should_chase": "yes",
       "chase_rationale": [
-        "大众科技媒体集中报道"
+        "跨越多个来源的AI安全叙事共振",
+        "xAI诉讼案揭示AI公司内部安全治理问题",
+        "Claude Fable过度限制引发实际用户投诉"
       ],
       "samples": [
         {
+          "platform": "techcrunch",
+          "title": "xAI fired an engineer who raised alarms about Grok safety, new lawsuit claims",
+          "url": "https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety",
+          "published_at": "2026-06-10T22:31:19Z",
+          "company": null,
+          "signal_level": "A"
+        },
+        {
           "platform": "theverge",
-          "title": "Artemis II: Everything We Know as Its Crew Approaches the Far Side of the Moon",
-          "url": "https://www.theverge.com/rss/index.xml",
-          "published_at": "2026-04-07T00:00:00Z",
+          "title": "Claude Fable won't answer basic biology questions",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/947973/fable-wont-answer-basic-biology-questions",
+          "published_at": "2026-06-10T18:43:34Z",
           "company": null,
           "signal_level": "B"
         },
         {
-          "platform": "arstechnica",
-          "title": "Artemis II astronauts break a record, name a crater",
-          "url": "https://feeds.arstechnica.com/arstechnica/index",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "hackernews",
+          "title": "AI agent runs amok in Fedora and elsewhere",
+          "url": "https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/",
+          "published_at": "2026-06-11T00:10:08Z",
           "company": null,
-          "signal_level": "B"
+          "signal_level": "A"
         },
         {
-          "platform": "wired",
-          "title": "NASA Artemis II mission",
-          "url": "https://www.wired.com/feed/rss",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "lobsters",
+          "title": "If Claude Fable stops helping you, you'll never know",
+          "url": "https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app",
+          "published_at": "2026-06-10T01:23:47Z",
           "company": null,
           "signal_level": "B"
         }
@@ -163,139 +176,131 @@
     },
     {
       "hotspot_id": "H04",
-      "title": "AI 机器人技术突破：GEN-1 可靠性 99%、机器人割草机与自动驾驶出租车",
-      "summary": "Physical AI 周：GEN-1 达到 99% 可靠性；NVIDIA National Robotics Week；机器人割草机商业化；自动驾驶出租车透明度受质疑。",
-      "category": "trend",
-      "overall_heat_score": 82,
-      "coverage": {
-        "source_count": 3,
-        "companies": [
-          "NVIDIA"
-        ],
-        "platforms": [
-          "nvidia",
-          "wired",
-          "theverge"
-        ]
-      },
-      "should_chase": "yes",
-      "chase_rationale": [
-        "NVIDIA A级 Physical AI 官方更新",
-        "GEN-1 99%可靠性里程碑"
-      ],
-      "samples": [
-        {
-          "platform": "nvidia",
-          "title": "National Robotics Week — Latest Physical AI Research, Breakthroughs and Resources",
-          "url": "https://blogs.nvidia.com/feed/",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": "NVIDIA",
-          "signal_level": "A"
-        },
-        {
-          "platform": "theverge",
-          "title": "From folding boxes to fixing vacuums, GEN-1 robotics model hits 99% reliability",
-          "url": "https://www.theverge.com/rss/index.xml",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
-          "signal_level": "B"
-        },
-        {
-          "platform": "wired",
-          "title": "Robot Mowers Are Actually Good Now",
-          "url": "https://www.wired.com/feed/rss",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
-          "signal_level": "B"
-        }
-      ]
-    },
-    {
-      "hotspot_id": "H05",
-      "title": "Anthropic 扩张：Google/Broadcom 算力合作与 Claude Code 源码意外曝光",
-      "summary": "Anthropic 与 Google、Broadcom 扩大下一代算力合作；Claude Code npm source map 意外公开部分源代码。",
+      "title": "Amazon EC2 M9g/M9gd发布：AWS Graviton5处理器驱动新一代云计算实例",
+      "summary": "AWS发布由全新Graviton5处理器驱动的EC2 M9g和M9gd实例。作为Amazon S级信号源的官方发布，这标志着AWS在ARM云计算基础设施上的重大跃进。结合Amazon同日宣布从银行借款175亿美元支持AI基础设施扩张，云计算军备竞赛持续升温。",
       "category": "single",
-      "overall_heat_score": 88,
+      "overall_heat_score": 82,
       "coverage": {
         "source_count": 2,
         "companies": [
-          "Anthropic",
-          "Google",
-          "Broadcom"
+          "Amazon"
         ],
         "platforms": [
-          "techcrunch",
-          "arstechnica"
-        ]
-      },
-      "should_chase": "yes",
-      "chase_rationale": [
-        "Anthropic S级战略动向",
-        "Claude Code源码曝光竞争情报"
-      ],
-      "samples": [
-        {
-          "platform": "techcrunch",
-          "title": "Anthropic expands partnership with Google and Broadcom for next-gen compute",
-          "url": "https://techcrunch.com/feed/",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
-          "signal_level": "A"
-        },
-        {
-          "platform": "arstechnica",
-          "title": "Anthropic Accidentally Exposes Claude Code Source via npm Source Map File",
-          "url": "https://feeds.arstechnica.com/arstechnica/index",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
-          "signal_level": "B"
-        }
-      ]
-    },
-    {
-      "hotspot_id": "H06",
-      "title": "ChatGPT 第三方应用集成：DoorDash、Spotify、Uber 接入",
-      "summary": "ChatGPT app integrations 接入 DoorDash、Spotify、Uber，AI 助手向生活操作系统演进。",
-      "category": "trend",
-      "overall_heat_score": 80,
-      "coverage": {
-        "source_count": 3,
-        "companies": [
-          "OpenAI"
-        ],
-        "platforms": [
-          "theverge",
-          "hackernews",
+          "aws-news",
           "techcrunch"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "AI助手生态扩张里程碑",
-        "多源报道"
+        "AWS官方S级发布，Graviton5是重大芯片迭代",
+        "配合Amazon 175亿AI借款，云基础设施扩张意图明确"
       ],
       "samples": [
         {
-          "platform": "theverge",
-          "title": "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others",
-          "url": "https://www.theverge.com/rss/index.xml",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "aws-news",
+          "title": "Now available: Amazon EC2 M9g and M9gd instances powered by new AWS Graviton5 processors",
+          "url": "https://aws.amazon.com/blogs/aws/now-available-amazon-ec2-m9g-and-m9gd-instances-powered-by-new-aws-graviton5-processors",
+          "published_at": "2026-06-10T15:04:30Z",
+          "company": "Amazon",
+          "signal_level": "A"
+        },
+        {
+          "platform": "techcrunch",
+          "title": "Fresh off bond sale, Amazon borrows $17.5B from banks as AI spending continues",
+          "url": "https://techcrunch.com/2026/06/10/fresh-off-bond-sale-amazon-borrows-17-5-billion",
+          "published_at": "2026-06-10T20:19:31Z",
+          "company": null,
+          "signal_level": "A"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H05",
+      "title": "OpenAI发布报告：PRC关联势力正将AI辩论武器化",
+      "summary": "OpenAI发布安全报告，揭示与中国政府关联的影响力操作网络正在利用AI工具介入美国国内AI政策辩论。这是OpenAI首次公开点名PRC试图影响AI治理叙事，具有重要地缘政治意涵。",
+      "category": "single",
+      "overall_heat_score": 80,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "OpenAI"
+        ],
+        "platforms": [
+          "openai"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "S级来源官方安全报告",
+        "AI+地缘政治交叉议题首次公开曝光",
+        "对AI治理政策讨论有直接影响"
+      ],
+      "samples": [
+        {
+          "platform": "openai",
+          "title": "PRC-linked influence operations are targeting AI debates in the US",
+          "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
+          "published_at": "2026-06-10T12:00:00Z",
+          "company": "OpenAI",
+          "signal_level": "S"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H06",
+      "title": "AI代理开发生态爆发：企业采用、工具链与基础设施同步进化",
+      "summary": "企业AI代理生态在多个维度同步推进：Jedify获2400万美元融资为AI代理提供企业上下文；Azure API Management发布统一模型API和MCP内容安全；Microsoft开源PostgreSQL持久执行扩展；InfoQ发布AI系统上下文工程演讲。同时企业AI支出达每员工每月7500美元高位。",
+      "category": "trend",
+      "overall_heat_score": 83,
+      "coverage": {
+        "source_count": 4,
+        "companies": [
+          "Microsoft",
+          "Amazon"
+        ],
+        "platforms": [
+          "techcrunch",
+          "infoq",
+          "microsoft-devblogs",
+          "devto"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "多维度同步推进，覆盖资金、工具、基础设施",
+        "Azure MCP集成是Microsoft Build 2026核心输出",
+        "企业AI支出数据揭示实际采购决策加速"
+      ],
+      "samples": [
+        {
+          "platform": "techcrunch",
+          "title": "Jedify raises $24M to help companies arm AI agents with context on their business",
+          "url": "https://techcrunch.com/2026/06/10/jedify-raises-24m-to-help-companies-arm-ai-agents",
+          "published_at": "2026-06-10T13:33:09Z",
+          "company": null,
+          "signal_level": "A"
+        },
+        {
+          "platform": "infoq",
+          "title": "Azure API Management Ships Unified Model API and MCP Content Safety at Build 2026",
+          "url": "https://www.infoq.com/news/2026/06/azure-apim-ai-gateway-build/",
+          "published_at": "2026-06-10T09:38:00Z",
           "company": null,
           "signal_level": "B"
         },
         {
           "platform": "techcrunch",
-          "title": "How to use the new ChatGPT app integrations",
-          "url": "https://techcrunch.com/feed/",
-          "published_at": "2026-04-07T00:00:00Z",
+          "title": "'AI-pilled' firms spend $7,500 per employee each month on AI",
+          "url": "https://techcrunch.com/2026/06/10/ai-pilled-firms-spend-7500-per-employee-each-month",
+          "published_at": "2026-06-10T17:07:35Z",
           "company": null,
           "signal_level": "A"
         },
         {
           "platform": "hackernews",
-          "title": "ChatGPT app integrations",
-          "url": "https://news.ycombinator.com/rss",
-          "published_at": "2026-04-07T00:00:00Z",
+          "title": "Apache Burr: Build reliable AI agents and applications",
+          "url": "https://burr.apache.org/",
+          "published_at": "2026-06-10T15:01:06Z",
           "company": null,
           "signal_level": "A"
         }
@@ -303,87 +308,99 @@
     },
     {
       "hotspot_id": "H07",
-      "title": "AWS DevOps AI Agent & Security Agent 正式发布",
-      "summary": "AWS DevOps Agent 与 Security Agent 正式 GA，含 Product Lifecycle 更新。",
-      "category": "single",
-      "overall_heat_score": 84,
-      "coverage": {
-        "source_count": 1,
-        "companies": [
-          "Amazon"
-        ],
-        "platforms": [
-          "aws-news"
-        ]
-      },
-      "should_chase": "yes",
-      "chase_rationale": [
-        "AWS A级官方公告，DevOps Agent GA 平台级里程碑"
-      ],
-      "samples": [
-        {
-          "platform": "aws-news",
-          "title": "AWS Weekly Roundup: AWS DevOps Agent & Security Agent GA, Product Lifecycle updates, and more (April 6, 2026)",
-          "url": "https://aws.amazon.com/blogs/aws/feed/",
-          "published_at": "2026-04-06T00:00:00Z",
-          "company": "Amazon",
-          "signal_level": "A"
-        }
-      ]
-    },
-    {
-      "hotspot_id": "H08",
-      "title": "供应链安全警报：朝鲜 npm 包劫持与 BrowserStack 私钥泄露",
-      "summary": "朝鲜黑客提前数周策划劫持热门 npm 包；BrowserStack 本地代理泄露用户私钥及邮箱。",
+      "title": "安全与隐私多点危机：Oracle泄露、ServiceNow漏洞、人脸识别冤案",
+      "summary": "24小时内安全事件密集爆发：网络犯罪分子声称入侵Oracle PeopleSoft服务器，波及100余家机构；ServiceNow发现数据暴露bug；约百万本护照ID遭公开；男子因人脸识别\"93%匹配\"遭错误逮捕；CISA命令联邦机构在3天内修复AI时代安全漏洞。",
       "category": "trend",
-      "overall_heat_score": 81,
+      "overall_heat_score": 79,
       "coverage": {
-        "source_count": 3,
+        "source_count": 4,
         "companies": [],
         "platforms": [
+          "techcrunch",
+          "theverge",
           "wired",
-          "lobsters",
           "arstechnica"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "供应链攻击对npm生态直接风险",
-        "多安全事件同周爆发"
+        "多平台安全事件共振",
+        "Oracle企业级违规影响100+机构，规模重大",
+        "CISA新指令直接影响政府采购和合规时间表"
       ],
       "samples": [
         {
-          "platform": "wired",
-          "title": "North Korea's hijack of one of the web's most used open source projects was likely weeks in the making",
-          "url": "https://www.wired.com/feed/rss",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "techcrunch",
+          "title": "Cybercriminals claim breach of Oracle PeopleSoft servers at 100-plus organizations",
+          "url": "https://techcrunch.com/2026/06/10/cybercriminals-claim-breach-of-oracle-peoplesoft-servers",
+          "published_at": "2026-06-10T21:33:32Z",
           "company": null,
-          "signal_level": "B"
+          "signal_level": "A"
         },
         {
-          "platform": "lobsters",
-          "title": "BrowserStack local leaking private key",
-          "url": "https://lobste.rs/s/browserstack-local-leaking-private-key",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "techcrunch",
+          "title": "ServiceNow tells customers a bug left some of their data exposed to the internet",
+          "url": "https://techcrunch.com/2026/06/10/servicenow-tells-customers-a-bug-left-some-of-their-data-exposed",
+          "published_at": "2026-06-10T14:13:02Z",
+          "company": null,
+          "signal_level": "A"
+        },
+        {
+          "platform": "wired",
+          "title": "CISA Tells US Agencies to Fix Security Bugs in as Little as 3 Days Thanks to AI Threats",
+          "url": "https://www.wired.com/story/cisa-ai-vulnerability-directive/",
+          "published_at": "2026-06-10T20:55:40Z",
           "company": null,
           "signal_level": "B"
         },
         {
           "platform": "arstechnica",
-          "title": "Someone at BrowserStack is Leaking Users Email Address",
-          "url": "https://feeds.arstechnica.com/arstechnica/index",
-          "published_at": "2026-04-07T00:00:00Z",
+          "title": "Man sues Florida cops over arrest spurred by \"93% match\" in facial recognition",
+          "url": "https://arstechnica.com/tech-policy/2026/06/man-jailed-due-to-faulty-face-recognition",
+          "published_at": "2026-06-10T21:30:44Z",
           "company": null,
           "signal_level": "B"
         }
       ]
     },
     {
-      "hotspot_id": "H09",
-      "title": "Cloudflare Organizations：企业级多账户管理 GA",
-      "summary": "Cloudflare 发布 Organizations 功能，帮助企业统一管理 Cloudflare 资源。",
+      "hotspot_id": "H08",
+      "title": "NVIDIA Halos OS：为机器人出租车构建安全优先的自动驾驶操作系统",
+      "summary": "NVIDIA发布Halos OS，专为机器人出租车设计，强调安全必须内建而非事后添加。在特斯拉电池业务竞争激烈、无人机安全事件频发的背景下，NVIDIA此举将安全架构提升到操作系统层面。",
       "category": "single",
       "overall_heat_score": 76,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "NVIDIA"
+        ],
+        "platforms": [
+          "nvidia"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "NVIDIA A级来源官方发布",
+        "机器人出租车安全OS是全新产品类别",
+        "对自动驾驶行业安全标准有示范效应"
+      ],
+      "samples": [
+        {
+          "platform": "nvidia",
+          "title": "For Robotaxis, Safety Must Be Built In, Not Bolted On",
+          "url": "https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/",
+          "published_at": "2026-06-10T19:00:12Z",
+          "company": "NVIDIA",
+          "signal_level": "A"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H09",
+      "title": "Cloudflare私有源DNS路由：公共流量接入私有应用新方案",
+      "summary": "Cloudflare发布新功能，支持将公共流量通过DNS路由到私有应用，无需暴露源服务器。这对零信任网络架构和企业应用发布模式有重要影响。",
+      "category": "single",
+      "overall_heat_score": 74,
       "coverage": {
         "source_count": 1,
         "companies": [
@@ -395,14 +412,15 @@
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "Cloudflare A级官方发布"
+        "A级官方更新，影响企业网络架构决策",
+        "零信任网络接入是当前热点方向"
       ],
       "samples": [
         {
           "platform": "cloudflare",
-          "title": "How we built Organizations to help enterprises manage Cloudflare at scale",
-          "url": "https://blog.cloudflare.com/rss/",
-          "published_at": "2026-04-07T00:00:00Z",
+          "title": "Route public traffic to private applications with Cloudflare",
+          "url": "https://blog.cloudflare.com/private-origins-dns-routing/",
+          "published_at": "2026-06-10T13:00:00Z",
           "company": "Cloudflare",
           "signal_level": "A"
         }
@@ -410,125 +428,113 @@
     },
     {
       "hotspot_id": "H10",
-      "title": "AI 经济与就业：四天工作周、机器人税与小卖家的 AI 转型",
-      "summary": "AI 经济政策讨论：机器人税、公共财富基金；AI 对小企业主实际影响；媒体分析 AI 与工作关系。",
-      "category": "trend",
-      "overall_heat_score": 79,
+      "title": "北韩黑客占据美科技行业近半攻击量，网络安全威胁格局演变",
+      "summary": "CrowdStrike报告显示，朝鲜黑客组织已占美国科技行业遭受攻击的近50%。同日，Oracle PeopleSoft遭到大规模入侵。跨国网络威胁已成为科技行业的常态化背景风险。",
+      "category": "single",
+      "overall_heat_score": 73,
       "coverage": {
-        "source_count": 4,
+        "source_count": 1,
         "companies": [],
         "platforms": [
-          "techcrunch",
-          "wired",
-          "mit-technology-review",
-          "devto"
+          "techcrunch"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "政策与现实双维度叙事",
-        "跨媒体多视角"
+        "A级来源，CrowdStrike权威数据披露",
+        "朝鲜科技攻击规模首次量化，数据震撼"
       ],
       "samples": [
         {
           "platform": "techcrunch",
-          "title": "OpenAI's vision for the AI economy: public wealth funds, robot taxes, and a four-day workweek",
-          "url": "https://techcrunch.com/feed/",
-          "published_at": "2026-04-07T00:00:00Z",
+          "title": "North Koreans behind nearly half of US tech industry hacks, says CrowdStrike",
+          "url": "https://techcrunch.com/2026/06/10/north-koreans-behind-nearly-half-of-us-tech-industry-hacks",
+          "published_at": "2026-06-10T19:57:04Z",
           "company": null,
           "signal_level": "A"
-        },
-        {
-          "platform": "wired",
-          "title": "AI is changing how small online sellers decide what to make",
-          "url": "https://www.wired.com/feed/rss",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
-          "signal_level": "B"
-        },
-        {
-          "platform": "mit-technology-review",
-          "title": "The one piece of data that could actually shed light on your job and AI",
-          "url": "https://www.technologyreview.com/feed/",
-          "published_at": "2026-04-07T00:00:00Z",
-          "company": null,
-          "signal_level": "B"
         }
       ]
     },
     {
       "hotspot_id": "H11",
-      "title": "量子计算时间线重估：密码学工程师视角",
-      "summary": "密码学工程师深度分析量子计算时间线，质疑主流乐观预期，提醒密码基础设施迁移窗口有限。",
+      "title": "AI记忆工具反效果研究与transformer注意力机制缺陷揭示",
+      "summary": "TechCrunch报道研究显示AI记忆工具可能实际上使模型表现更差；学术研究发现transformer注意力机制中存在执行控制缺陷（类比人类ADHD）。这两项发现对当前AI产品设计路线图有重要影响。",
       "category": "trend",
-      "overall_heat_score": 74,
+      "overall_heat_score": 71,
       "coverage": {
         "source_count": 2,
         "companies": [],
         "platforms": [
-          "arstechnica",
-          "lobsters"
+          "techcrunch",
+          "hackernews"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "安全基础设施话题跨平台共振",
-        "密码学工程师一手观点"
+        "记忆工具反效果研究直接影响AI产品设计决策",
+        "transformer架构缺陷研究为学术界新发现"
       ],
       "samples": [
         {
-          "platform": "arstechnica",
-          "title": "A cryptography engineer perspective on quantum computing timelines",
-          "url": "https://feeds.arstechnica.com/arstechnica/index",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "techcrunch",
+          "title": "How memory tools can make AI models worse",
+          "url": "https://techcrunch.com/2026/06/10/how-memory-tools-can-make-ai-models-worse/",
+          "published_at": "2026-06-10T16:11:08Z",
           "company": null,
-          "signal_level": "B"
+          "signal_level": "A"
         },
         {
-          "platform": "lobsters",
-          "title": "A Cryptography Engineer Perspective on Quantum Computing Timelines",
-          "url": "https://lobste.rs/s/quantum-cryptography",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "hackernews",
+          "title": "Deficient executive control in transformer attention",
+          "url": "https://academic.oup.com/pnasnexus/article/5/6/pgag149/8698838",
+          "published_at": "2026-06-10T23:35:01Z",
           "company": null,
-          "signal_level": "B"
+          "signal_level": "A"
         }
       ]
     },
     {
       "hotspot_id": "H12",
-      "title": "Google 开源 Scion 多智能体编排测试床 & 离线 AI 听写应用",
-      "summary": "Google 开源实验性多智能体编排测试床 Scion；悄然上线可离线工作的 AI 听写应用。",
-      "category": "single",
-      "overall_heat_score": 78,
+      "title": "2026 FIFA世界杯科技议题：AI监控、Google Gemini渗透与球迷隐私",
+      "summary": "Wired发布大量世界杯相关科技报道：AI（Google Gemini）悄然进入世界杯技术体系、裁判佩戴体感摄像头直播、Flock车牌识别设备围绕赛场部署、球迷面临生物特征监控风险。世界杯成为2026年科技与隐私议题的重要舞台。",
+      "category": "trend",
+      "overall_heat_score": 68,
       "coverage": {
-        "source_count": 2,
+        "source_count": 1,
         "companies": [
           "Google"
         ],
         "platforms": [
-          "hackernews",
-          "theverge"
+          "wired"
         ]
       },
-      "should_chase": "yes",
+      "should_chase": "no",
       "chase_rationale": [
-        "Google开源多智能体工具",
-        "离线AI预示端侧加速"
+        "单一来源但体量大，属于专题系列报道",
+        "AI监控与隐私议题有持续热度"
       ],
       "samples": [
         {
-          "platform": "hackernews",
-          "title": "Google Open Sources Experimental Multi-Agent Orchestration Testbed Scion",
-          "url": "https://news.ycombinator.com/rss",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "wired",
+          "title": "Artificial Intelligence Sneaks Into the World Cup Thanks to Google Gemini",
+          "url": "https://www.wired.com/story/artificial-intelligence-sneaks-into-the-world-cup-thanks-to-google-gemini",
+          "published_at": "2026-06-10T10:00:00Z",
           "company": null,
-          "signal_level": "A"
+          "signal_level": "B"
         },
         {
-          "platform": "theverge",
-          "title": "Google quietly launched an AI dictation app that works offline",
-          "url": "https://www.theverge.com/rss/index.xml",
-          "published_at": "2026-04-07T00:00:00Z",
+          "platform": "wired",
+          "title": "Soccer Fans, You're Being Watched",
+          "url": "https://www.wired.com/story/soccer-world-cup-biometric-surveillance/",
+          "published_at": "2026-06-10T10:00:00Z",
+          "company": null,
+          "signal_level": "B"
+        },
+        {
+          "platform": "wired",
+          "title": "Mapping Every Flock License Plate Reader Near US World Cup Stadiums",
+          "url": "https://www.wired.com/story/us-world-cup-2026-alpr-camera-stadiums/",
+          "published_at": "2026-06-10T10:00:00Z",
           "company": null,
           "signal_level": "B"
         }
