@@ -10,7 +10,7 @@ tools:
   edit:
 engine:
   id: copilot
-  model: "gpt-5.4?effort=low"
+  model: auto
 timeout-minutes: 45
 network:
   allowed:

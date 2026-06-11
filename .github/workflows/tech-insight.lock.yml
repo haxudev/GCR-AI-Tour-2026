@@ -21,7 +21,7 @@
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
 #
-# gh-aw-metadata: {"schema_version":"v3","frontmatter_hash":"68a1cca14c162af310012acb237b10daed76c7b237b9acfefac5a1855b1a2ff9","compiler_version":"v0.64.3","agent_id":"copilot","agent_model":"gpt-5.4?effort=low"}
+# gh-aw-metadata: {"schema_version":"v3","frontmatter_hash":"f54eb8bff5c4a05f0c7d060b76e973c1e640ab54f253d6e7012e817d06bc0b0a","compiler_version":"v0.64.3","agent_id":"copilot","agent_model":"auto"}
 
 name: "Tech Insight Workflow"
 "on":
@@ -61,7 +61,7 @@ jobs:
         env:
           GH_AW_INFO_ENGINE_ID: "copilot"
           GH_AW_INFO_ENGINE_NAME: "GitHub Copilot CLI"
-          GH_AW_INFO_MODEL: "gpt-5.4?effort=low"
+          GH_AW_INFO_MODEL: "auto"
           GH_AW_INFO_VERSION: "latest"
           GH_AW_INFO_AGENT_VERSION: "latest"
           GH_AW_INFO_CLI_VERSION: "v0.64.3"
@@ -122,19 +122,19 @@ jobs:
         run: |
           bash ${RUNNER_TEMP}/gh-aw/actions/create_prompt_first.sh
           {
-          cat << 'GH_AW_PROMPT_496539e9b54d4191_EOF'
+          cat << 'GH_AW_PROMPT_60f7b6fc5227d946_EOF'
           <system>
-          GH_AW_PROMPT_496539e9b54d4191_EOF
+          GH_AW_PROMPT_60f7b6fc5227d946_EOF
           cat "${RUNNER_TEMP}/gh-aw/prompts/xpia.md"
           cat "${RUNNER_TEMP}/gh-aw/prompts/temp_folder_prompt.md"
           cat "${RUNNER_TEMP}/gh-aw/prompts/markdown.md"
           cat "${RUNNER_TEMP}/gh-aw/prompts/safe_outputs_prompt.md"
-          cat << 'GH_AW_PROMPT_496539e9b54d4191_EOF'
+          cat << 'GH_AW_PROMPT_60f7b6fc5227d946_EOF'
           <safe-output-tools>
           Tools: create_pull_request, missing_tool, missing_data, noop
-          GH_AW_PROMPT_496539e9b54d4191_EOF
+          GH_AW_PROMPT_60f7b6fc5227d946_EOF
           cat "${RUNNER_TEMP}/gh-aw/prompts/safe_outputs_create_pull_request.md"
-          cat << 'GH_AW_PROMPT_496539e9b54d4191_EOF'
+          cat << 'GH_AW_PROMPT_60f7b6fc5227d946_EOF'
           </safe-output-tools>
           <github-context>
           The following GitHub context information is available for this workflow:
@@ -164,14 +164,14 @@ jobs:
           {{/if}}
           </github-context>
           
-          GH_AW_PROMPT_496539e9b54d4191_EOF
+          GH_AW_PROMPT_60f7b6fc5227d946_EOF
           cat "${RUNNER_TEMP}/gh-aw/prompts/github_mcp_tools_with_safeoutputs_prompt.md"
-          cat << 'GH_AW_PROMPT_496539e9b54d4191_EOF'
+          cat << 'GH_AW_PROMPT_60f7b6fc5227d946_EOF'
           </system>
-          GH_AW_PROMPT_496539e9b54d4191_EOF
-          cat << 'GH_AW_PROMPT_496539e9b54d4191_EOF'
+          GH_AW_PROMPT_60f7b6fc5227d946_EOF
+          cat << 'GH_AW_PROMPT_60f7b6fc5227d946_EOF'
           {{#runtime-import .github/workflows/tech-insight.md}}
-          GH_AW_PROMPT_496539e9b54d4191_EOF
+          GH_AW_PROMPT_60f7b6fc5227d946_EOF
           } > "$GH_AW_PROMPT"
       - name: Interpolate variables and render templates
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
@@ -323,12 +323,12 @@ jobs:
           mkdir -p ${RUNNER_TEMP}/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/mcp-logs/safeoutputs
-          cat > ${RUNNER_TEMP}/gh-aw/safeoutputs/config.json << 'GH_AW_SAFE_OUTPUTS_CONFIG_278373bc75aa8dc5_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/safeoutputs/config.json << 'GH_AW_SAFE_OUTPUTS_CONFIG_403c7c387e63c1a2_EOF'
           {"create_pull_request":{"labels":["automation","tech-insight"],"max":1,"max_patch_size":1024,"protected_files":["package.json","bun.lockb","bunfig.toml","deno.json","deno.jsonc","deno.lock","global.json","NuGet.Config","Directory.Packages.props","mix.exs","mix.lock","go.mod","go.sum","stack.yaml","stack.yaml.lock","pom.xml","build.gradle","build.gradle.kts","settings.gradle","settings.gradle.kts","gradle.properties","package-lock.json","yarn.lock","pnpm-lock.yaml","npm-shrinkwrap.json","requirements.txt","Pipfile","Pipfile.lock","pyproject.toml","setup.py","setup.cfg","Gemfile","Gemfile.lock","uv.lock","CODEOWNERS"],"protected_path_prefixes":[".github/",".agents/"],"title_prefix":"[tech-insight] "},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"true"}}
-          GH_AW_SAFE_OUTPUTS_CONFIG_278373bc75aa8dc5_EOF
+          GH_AW_SAFE_OUTPUTS_CONFIG_403c7c387e63c1a2_EOF
       - name: Write Safe Outputs Tools
         run: |
-          cat > ${RUNNER_TEMP}/gh-aw/safeoutputs/tools_meta.json << 'GH_AW_SAFE_OUTPUTS_TOOLS_META_91ba03540a85aa4c_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/safeoutputs/tools_meta.json << 'GH_AW_SAFE_OUTPUTS_TOOLS_META_b4b066e71810245c_EOF'
           {
             "description_suffixes": {
               "create_pull_request": " CONSTRAINTS: Maximum 1 pull request(s) can be created. Title will be prefixed with \"[tech-insight] \". Labels [\"automation\" \"tech-insight\"] will be automatically added."
@@ -336,8 +336,8 @@ jobs:
             "repo_params": {},
             "dynamic_tools": []
           }
-          GH_AW_SAFE_OUTPUTS_TOOLS_META_91ba03540a85aa4c_EOF
-          cat > ${RUNNER_TEMP}/gh-aw/safeoutputs/validation.json << 'GH_AW_SAFE_OUTPUTS_VALIDATION_be3bed6812aab053_EOF'
+          GH_AW_SAFE_OUTPUTS_TOOLS_META_b4b066e71810245c_EOF
+          cat > ${RUNNER_TEMP}/gh-aw/safeoutputs/validation.json << 'GH_AW_SAFE_OUTPUTS_VALIDATION_376203c840b8febf_EOF'
           {
             "create_pull_request": {
               "defaultMax": 1,
@@ -433,7 +433,7 @@ jobs:
               }
             }
           }
-          GH_AW_SAFE_OUTPUTS_VALIDATION_be3bed6812aab053_EOF
+          GH_AW_SAFE_OUTPUTS_VALIDATION_376203c840b8febf_EOF
           node ${RUNNER_TEMP}/gh-aw/actions/generate_safe_outputs_tools.cjs
       - name: Generate Safe Outputs MCP Server Config
         id: safe-outputs-config
@@ -476,7 +476,7 @@ jobs:
       - name: Setup MCP Scripts Config
         run: |
           mkdir -p ${RUNNER_TEMP}/gh-aw/mcp-scripts/logs
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tools.json << 'GH_AW_MCP_SCRIPTS_TOOLS_8a0136d7376008a7_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tools.json << 'GH_AW_MCP_SCRIPTS_TOOLS_0ce694bec13a65e3_EOF'
           {
             "serverName": "mcpscripts",
             "version": "1.0.0",
@@ -680,8 +680,8 @@ jobs:
               }
             ]
           }
-          GH_AW_MCP_SCRIPTS_TOOLS_8a0136d7376008a7_EOF
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/mcp-server.cjs << 'GH_AW_MCP_SCRIPTS_SERVER_0c3742a9dc687ba7_EOF'
+          GH_AW_MCP_SCRIPTS_TOOLS_0ce694bec13a65e3_EOF
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/mcp-server.cjs << 'GH_AW_MCP_SCRIPTS_SERVER_325f99b326d8c121_EOF'
             const path = require("path");
             const { startHttpServer } = require("./mcp_scripts_mcp_server_http.cjs");
             const configPath = path.join(__dirname, "tools.json");
@@ -695,12 +695,12 @@ jobs:
               console.error("Failed to start mcp-scripts HTTP server:", error);
               process.exit(1);
             });
-          GH_AW_MCP_SCRIPTS_SERVER_0c3742a9dc687ba7_EOF
+          GH_AW_MCP_SCRIPTS_SERVER_325f99b326d8c121_EOF
           chmod +x ${RUNNER_TEMP}/gh-aw/mcp-scripts/mcp-server.cjs
           
       - name: Setup MCP Scripts Tool Files
         run: |
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-cluster-or-fallback.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-CLUSTER-OR-FALLBACK_0c547a9877ae9cc6_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-cluster-or-fallback.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-CLUSTER-OR-FALLBACK_1d88d5ea04a3ca8c_EOF'
           #!/bin/bash
           # Auto-generated mcp-script tool: tech-cluster-or-fallback
           # Validate and fallback clustering results
@@ -711,9 +711,9 @@ jobs:
           echo "{\"raw_signals_json\": $(echo $INPUT_RAW_SIGNALS_JSON | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))'), \"clusters_json\": $(echo $INPUT_CLUSTERS_JSON | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))'), \"top_k\": ${INPUT_TOP_K:-12}}" | python3 Lab-01-Tech-Insights/mcp-scripts/tech_cluster_or_fallback.py
           
           
-          GH_AW_MCP_SCRIPTS_SH_TECH-CLUSTER-OR-FALLBACK_0c547a9877ae9cc6_EOF
+          GH_AW_MCP_SCRIPTS_SH_TECH-CLUSTER-OR-FALLBACK_1d88d5ea04a3ca8c_EOF
           chmod +x ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-cluster-or-fallback.sh
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-fetch-all-to-disk.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-FETCH-ALL-TO-DISK_4b0e26891d70e118_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-fetch-all-to-disk.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-FETCH-ALL-TO-DISK_df62bb2bd6123a53_EOF'
           #!/bin/bash
           # Auto-generated mcp-script tool: tech-fetch-all-to-disk
           # Fetch all sources to disk in parallel
@@ -736,9 +736,9 @@ jobs:
           "
           
           
-          GH_AW_MCP_SCRIPTS_SH_TECH-FETCH-ALL-TO-DISK_4b0e26891d70e118_EOF
+          GH_AW_MCP_SCRIPTS_SH_TECH-FETCH-ALL-TO-DISK_df62bb2bd6123a53_EOF
           chmod +x ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-fetch-all-to-disk.sh
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-insight-or-fallback.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-INSIGHT-OR-FALLBACK_dc73e28a6d3897eb_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-insight-or-fallback.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-INSIGHT-OR-FALLBACK_a7f2a0d8e1f25c4a_EOF'
           #!/bin/bash
           # Auto-generated mcp-script tool: tech-insight-or-fallback
           # Validate and fallback insight results
@@ -749,9 +749,9 @@ jobs:
           echo "{\"clusters_json\": $(echo $INPUT_CLUSTERS_JSON | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))'), \"insights_json\": $(echo $INPUT_INSIGHTS_JSON | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))') }" | python3 Lab-01-Tech-Insights/mcp-scripts/tech_insight_or_fallback.py
           
           
-          GH_AW_MCP_SCRIPTS_SH_TECH-INSIGHT-OR-FALLBACK_dc73e28a6d3897eb_EOF
+          GH_AW_MCP_SCRIPTS_SH_TECH-INSIGHT-OR-FALLBACK_a7f2a0d8e1f25c4a_EOF
           chmod +x ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-insight-or-fallback.sh
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-load-articles-from-disk.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-LOAD-ARTICLES-FROM-DISK_593a120808c52510_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-load-articles-from-disk.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-LOAD-ARTICLES-FROM-DISK_0c34623c3ab562da_EOF'
           #!/bin/bash
           # Auto-generated mcp-script tool: tech-load-articles-from-disk
           # Load and filter valid articles from disk
@@ -773,9 +773,9 @@ jobs:
           "
           
           
-          GH_AW_MCP_SCRIPTS_SH_TECH-LOAD-ARTICLES-FROM-DISK_593a120808c52510_EOF
+          GH_AW_MCP_SCRIPTS_SH_TECH-LOAD-ARTICLES-FROM-DISK_0c34623c3ab562da_EOF
           chmod +x ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-load-articles-from-disk.sh
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-read-source-list.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-READ-SOURCE-LIST_becdc1bf0d2ed512_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-read-source-list.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-READ-SOURCE-LIST_660e0ee719f503e1_EOF'
           #!/bin/bash
           # Auto-generated mcp-script tool: tech-read-source-list
           # Read RSS source list configuration
@@ -786,9 +786,9 @@ jobs:
           echo "{\"source_list_path\": \"$INPUT_SOURCE_LIST_PATH\"}" | python3 Lab-01-Tech-Insights/mcp-scripts/tech_read_source_list.py
           
           
-          GH_AW_MCP_SCRIPTS_SH_TECH-READ-SOURCE-LIST_becdc1bf0d2ed512_EOF
+          GH_AW_MCP_SCRIPTS_SH_TECH-READ-SOURCE-LIST_660e0ee719f503e1_EOF
           chmod +x ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-read-source-list.sh
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-render-report-or-fallback.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-RENDER-REPORT-OR-FALLBACK_817aca3616ac9ce4_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-render-report-or-fallback.sh << 'GH_AW_MCP_SCRIPTS_SH_TECH-RENDER-REPORT-OR-FALLBACK_b0d144bb6c4919f0_EOF'
           #!/bin/bash
           # Auto-generated mcp-script tool: tech-render-report-or-fallback
           # Validate and fallback report rendering
@@ -799,9 +799,9 @@ jobs:
           echo "{\"clusters_json\": $(echo $INPUT_CLUSTERS_JSON | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))'), \"insights_json\": $(echo $INPUT_INSIGHTS_JSON | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))'), \"draft_markdown\": $(echo $INPUT_DRAFT_MARKDOWN | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))')}" | python3 Lab-01-Tech-Insights/mcp-scripts/tech_render_report_or_fallback.py
           
           
-          GH_AW_MCP_SCRIPTS_SH_TECH-RENDER-REPORT-OR-FALLBACK_817aca3616ac9ce4_EOF
+          GH_AW_MCP_SCRIPTS_SH_TECH-RENDER-REPORT-OR-FALLBACK_b0d144bb6c4919f0_EOF
           chmod +x ${RUNNER_TEMP}/gh-aw/mcp-scripts/tech-render-report-or-fallback.sh
-          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/write-text-file.sh << 'GH_AW_MCP_SCRIPTS_SH_WRITE-TEXT-FILE_c09c23df505eda03_EOF'
+          cat > ${RUNNER_TEMP}/gh-aw/mcp-scripts/write-text-file.sh << 'GH_AW_MCP_SCRIPTS_SH_WRITE-TEXT-FILE_b72c6237ac2e1fa0_EOF'
           #!/bin/bash
           # Auto-generated mcp-script tool: write-text-file
           # Write text content to a file
@@ -812,7 +812,7 @@ jobs:
           echo "{\"path\": \"$INPUT_PATH\", \"text\": $(echo $INPUT_TEXT | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))'), \"overwrite\": ${INPUT_OVERWRITE:-true}}" | python3 Lab-01-Tech-Insights/mcp-scripts/write_text_file.py
           
           
-          GH_AW_MCP_SCRIPTS_SH_WRITE-TEXT-FILE_c09c23df505eda03_EOF
+          GH_AW_MCP_SCRIPTS_SH_WRITE-TEXT-FILE_b72c6237ac2e1fa0_EOF
           chmod +x ${RUNNER_TEMP}/gh-aw/mcp-scripts/write-text-file.sh
           
       - name: Generate MCP Scripts Server Config
@@ -877,7 +877,7 @@ jobs:
           export MCP_GATEWAY_DOCKER_COMMAND='docker run -i --rm --network host -v /var/run/docker.sock:/var/run/docker.sock -e MCP_GATEWAY_PORT -e MCP_GATEWAY_DOMAIN -e MCP_GATEWAY_API_KEY -e MCP_GATEWAY_PAYLOAD_DIR -e MCP_GATEWAY_PAYLOAD_SIZE_THRESHOLD -e DEBUG -e MCP_GATEWAY_LOG_DIR -e GH_AW_MCP_LOG_DIR -e GH_AW_SAFE_OUTPUTS -e GH_AW_SAFE_OUTPUTS_CONFIG_PATH -e GH_AW_SAFE_OUTPUTS_TOOLS_PATH -e GH_AW_ASSETS_BRANCH -e GH_AW_ASSETS_MAX_SIZE_KB -e GH_AW_ASSETS_ALLOWED_EXTS -e DEFAULT_BRANCH -e GITHUB_MCP_SERVER_TOKEN -e GITHUB_MCP_GUARD_MIN_INTEGRITY -e GITHUB_MCP_GUARD_REPOS -e GITHUB_REPOSITORY -e GITHUB_SERVER_URL -e GITHUB_SHA -e GITHUB_WORKSPACE -e GITHUB_TOKEN -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RUN_ATTEMPT -e GITHUB_JOB -e GITHUB_ACTION -e GITHUB_EVENT_NAME -e GITHUB_EVENT_PATH -e GITHUB_ACTOR -e GITHUB_ACTOR_ID -e GITHUB_TRIGGERING_ACTOR -e GITHUB_WORKFLOW -e GITHUB_WORKFLOW_REF -e GITHUB_WORKFLOW_SHA -e GITHUB_REF -e GITHUB_REF_NAME -e GITHUB_REF_TYPE -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GH_AW_MCP_SCRIPTS_PORT -e GH_AW_MCP_SCRIPTS_API_KEY -e GH_AW_SAFE_OUTPUTS_PORT -e GH_AW_SAFE_OUTPUTS_API_KEY -v /tmp/gh-aw/mcp-payloads:/tmp/gh-aw/mcp-payloads:rw -v /opt:/opt:ro -v /tmp:/tmp:rw -v '"${GITHUB_WORKSPACE}"':'"${GITHUB_WORKSPACE}"':rw ghcr.io/github/gh-aw-mcpg:v0.2.8'
           
           mkdir -p /home/runner/.copilot
-          cat << GH_AW_MCP_CONFIG_9ce326bb6474331a_EOF | bash ${RUNNER_TEMP}/gh-aw/actions/start_mcp_gateway.sh
+          cat << GH_AW_MCP_CONFIG_848f0a69017f8e77_EOF | bash ${RUNNER_TEMP}/gh-aw/actions/start_mcp_gateway.sh
           {
             "mcpServers": {
               "github": {
@@ -932,7 +932,7 @@ jobs:
               "payloadDir": "${MCP_GATEWAY_PAYLOAD_DIR}"
             }
           }
-          GH_AW_MCP_CONFIG_9ce326bb6474331a_EOF
+          GH_AW_MCP_CONFIG_848f0a69017f8e77_EOF
       - name: Download activation artifact
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
@@ -954,7 +954,7 @@ jobs:
         env:
           COPILOT_AGENT_RUNNER_TYPE: STANDALONE
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
-          COPILOT_MODEL: gpt-5.4?effort=low
+          COPILOT_MODEL: auto
           GH_AW_MCP_CONFIG: /home/runner/.copilot/mcp-config.json
           GH_AW_PHASE: agent
           GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
@@ -1360,7 +1360,7 @@ jobs:
         env:
           COPILOT_AGENT_RUNNER_TYPE: STANDALONE
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
-          COPILOT_MODEL: gpt-5.4?effort=low
+          COPILOT_MODEL: auto
           GH_AW_PHASE: detection
           GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
           GH_AW_VERSION: v0.64.3
@@ -1411,7 +1411,7 @@ jobs:
     env:
       GH_AW_CALLER_WORKFLOW_ID: "${{ github.repository }}/tech-insight"
       GH_AW_ENGINE_ID: "copilot"
-      GH_AW_ENGINE_MODEL: "gpt-5.4?effort=low"
+      GH_AW_ENGINE_MODEL: "auto"
       GH_AW_WORKFLOW_ID: "tech-insight"
       GH_AW_WORKFLOW_NAME: "Tech Insight Workflow"
     outputs:
