@@ -19,6 +19,11 @@
       "repo": "actions/upload-artifact",
       "version": "v7",
       "sha": "bbbca2ddaa5d8feaa63e36b76fdaad77386f024f"
+    },
+    "github/gh-aw-actions/setup@v0.64.3": {
+      "repo": "github/gh-aw-actions/setup",
+      "version": "v0.64.3",
+      "sha": "84dc9c12e0d955a200911a3a07c3f5dd96a175d7"
     }
   }
 }
