@@ -8,9 +8,7 @@ permissions:
 tools:
   bash: [":*"]
   edit:
-engine:
-  id: copilot
-  model: auto
+engine: copilot
 timeout-minutes: 45
 network:
   allowed:
